@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="uk-height-1-1">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Login - UIkit 3 KickOff</title>
+		<link rel="icon" href="img/favicon.ico">
+		<!-- CSS FILES -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
+	</head>
+	<body class="uk-height-1-1 uk-cover-container uk-background-secondary">
+		
+		<img srcset="https://picsum.photos/640/700/?image=1037 640w,
+		             https://picsum.photos/960/700/?image=1037 960w,
+		             https://picsum.photos/1200/900/?image=1037 1200w,
+		             https://picsum.photos/2000/1000/?image=1037 2000w"
+		     sizes="100vw"
+		     src="https://picsum.photos/1200/900/?image=1037" alt="" data-uk-cover data-uk-img
+		>
+
+		
+
+
+		<div class="uk-position-cover uk-overlay-primary"></div>
+		
+		<div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-light uk-position-relative uk-position-z-index">
+			<div class="uk-position-bottom-center uk-position-small uk-visible@m">
+				<span class="uk-text-small uk-text-muted">© 2019 NJU.py - <a href="https://github.com/zzseba78/Kick-Off">Created by NJU.py</a> | Built with <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span data-uk-icon="uikit"></span></a></span>
+			</div>
+			<div class="uk-width-medium uk-padding-small" uk-scrollspy="cls: uk-animation-fade">
+				<div class="uk-text-center uk-margin">
+					<img src="img/moodle.png" alt="Logo">
+				</div>
+				<form action="login-dark.html">
+					<fieldset class="uk-fieldset">
+						<div class="uk-margin">
+							<div class="uk-inline uk-width-1-1">
+								<span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: user"></span>
+								<input class="uk-input uk-border-pill" required placeholder="Username" type="text">
+							</div>
+						</div>
+						<div class="uk-margin">
+							<div class="uk-inline uk-width-1-1">
+								<span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: lock"></span>
+								<input class="uk-input uk-border-pill" required placeholder="Password" type="password">
+							</div>
+						</div>
+						
+						<div class="uk-margin">
+							<label><input class="uk-checkbox" type="checkbox"> Keep me logged in</label>
+						</div>
+						<div class="uk-margin">
+							<button type="submit" class="uk-button uk-button-primary uk-border-pill uk-width-1-1">LOG IN</button>
+						</div>
+					</fieldset>
+				</form>
+				<div>
+					<div class="uk-text-center">
+						<a class="uk-link-reset uk-text-small" data-uk-toggle="target: #recover;animation: uk-animation-slide-top-small">Forgot your password?</a>
+					</div>
+					<div class="uk-margin-small-top" id="recover" hidden>
+						<form action="login-dark.html">
+							
+							<div class="uk-margin-small">
+								<div class="uk-inline uk-width-1-1">
+									<span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: mail"></span>
+									<input class="uk-input uk-border-pill" placeholder="E-mail" required type="text">
+								</div>
+							</div>
+							<div class="uk-margin-small">
+								<button type="submit" class="uk-button uk-button-primary uk-border-pill uk-width-1-1">SEND PASSWORD</button>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- JS FILES -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+</html>
