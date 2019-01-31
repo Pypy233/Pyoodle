@@ -22,6 +22,7 @@ public class User {
     @Column(name = "student_number")
     private String studentNumber;
 
+    @Enumerated(EnumType.STRING)
     private UserType type;
 
     private String email;

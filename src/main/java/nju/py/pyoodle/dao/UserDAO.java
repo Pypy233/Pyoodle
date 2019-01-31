@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date: 2019/1/30 上午2:21
  * @Version 1.0
  */
-public interface UserDAO extends JpaRepository<User, Integer>{
+public interface UserDAO extends JpaRepository<User, String>{
     User getUserByName(String username);
 
 }

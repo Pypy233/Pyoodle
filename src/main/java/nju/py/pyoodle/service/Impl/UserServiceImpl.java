@@ -4,6 +4,7 @@ import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.UserService;
 import nju.py.pyoodle.util.Response;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,14 +26,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response<Boolean> canLogin(String username, String pwd) {
         User user = userDAO.getUserByName(username);
+       // System.out.println(user.getName());
         if(user == null) {
             return new Response<>(false, null, "Fail to find user...");
         }
+        System.out.println("*******");
+        System.out.println(username);
+        System.out.println(pwd);
         if(user.getPassword().equals(pwd)) {
             return new Response<>(true, "Succeed to index.html..");
         }
+        else {
 
-        return new Response<>(false, "Password error...");
+            return new Response<>(false, "Password error...");
+        }
     }
 
     @Override
