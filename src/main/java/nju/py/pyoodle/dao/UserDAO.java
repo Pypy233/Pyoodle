@@ -11,4 +11,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserDAO extends JpaRepository<User, String>{
     User getUserByName(String username);
 
+    User getUserByEmail(String email);
+
+    User getUserByConfirmationToken(String token);
+
+
 }

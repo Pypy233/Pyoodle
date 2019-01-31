@@ -19,8 +19,20 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
     @Override
-    public Response<Boolean> addUser(String username, String pwd, String email) {
-        return null;
+    public boolean saveUser(String username, String pwd) {
+        if(userDAO.getUserByName(username)!= null) {
+            return false;
+        }
+        User user = new User();
+        user.setName(username);
+        user.setPassword(pwd);
+        userDAO.save(user);
+        return true;
+    }
+
+    @Override
+    public void saveUser(User user) {
+        userDAO.save(user);
     }
 
     @Override
@@ -45,5 +57,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response<Boolean> updateUser(String name, String studentNumber) {
         return null;
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return userDAO.getUserByEmail(email);
+    }
+
+    @Override
+    public User indByConfirmationToken(String confirmationToken) {
+        return userDAO.getUserByConfirmationToken(confirmationToken);
     }
 }

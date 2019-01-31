@@ -27,5 +27,8 @@ public class User {
 
     private String email;
 
+    @Column(name = "confirmation_token")
+    private String confirmationToken;
+
     
 }
