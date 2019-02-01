@@ -2,33 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6ed9d7-2dd7-4eac-b573-ddbab8aa5901" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sun_mail_javax_mail_1_6_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_activation_activation_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_mail_2_1_2_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_core_5_1_2_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_support_5_1_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/nju/py/pyoodle/service/Impl/MailServiceImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/pyoodle_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/pyoodle_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/pyoodle_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/pyoodle_test.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/IdentityUtil.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/static/index.html" afterPath="$PROJECT_DIR$/out/production/resources/static/index.html" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/register.html" afterPath="$PROJECT_DIR$/out/production/resources/static/register.html" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/test.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/UserDAO.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/register.html" afterPath="$PROJECT_DIR$/src/main/resources/static/register.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/test.html" afterPath="$PROJECT_DIR$/src/main/resources/static/error.html" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nju/py/pyoodle/service/Impl/MailServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/nju/py/pyoodle/service/Impl/MailServiceImplTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -50,121 +39,150 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="505">
+              <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
               <folding>
-                <element signature="e#693#716#1" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-                <element signature="e#1014#1058#1" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1718#1719#0" expanded="true" />
-                <element signature="e#1770#1771#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1426#1456#0" expanded="true" />
+                <element signature="e#1426#1456#0" expanded="true" />
+                <element signature="e#1460#1477#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1776#1777#0" expanded="true" />
+                <element signature="e#1835#1836#0" expanded="true" />
+                <element signature="e#1887#1888#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MailServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            <state relative-caret-position="1036">
+              <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#812#869#1" expanded="true" />
-                <element signature="e#1043#1100#1" expanded="true" />
-                <element signature="e#1113#1186#1" expanded="true" />
-                <element signature="e#1214#1238#0" expanded="true" />
-                <element signature="e#1253#1272#0" expanded="true" />
-                <element signature="e#1253#1272#0" expanded="true" />
-                <element signature="e#1286#1312#0" expanded="true" />
-                <element signature="e#1286#1312#0" expanded="true" />
-                <element signature="e#1326#1350#0" expanded="true" />
-                <element signature="e#1326#1350#0" expanded="true" />
-                <element signature="e#1364#1416#1" expanded="true" />
-                <element signature="e#1429#1636#1" expanded="true" />
-                <element signature="e#1442#1635#0" expanded="true" />
-                <element signature="e#1442#1635#0" expanded="true" />
-                <element signature="e#1442#1635#0" expanded="true" />
-                <element signature="e#1442#1635#0" expanded="true" />
-                <element signature="e#1442#1635#0" expanded="true" />
-                <element signature="e#2009#2053#1" expanded="true" />
-                <element signature="e#2062#2094#0" expanded="true" />
-                <element signature="e#2062#2094#0" expanded="true" />
-                <element signature="e#2238#2282#1" expanded="true" />
-                <element signature="e#2298#2325#0" expanded="true" />
-                <element signature="e#2337#2364#0" expanded="true" />
-                <element signature="e#2337#2378#0" expanded="true" />
-                <element signature="e#2337#2378#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#1156#1186#0" expanded="true" />
+                <element signature="e#1156#1186#0" expanded="true" />
+                <element signature="e#1200#1227#0" expanded="true" />
+                <element signature="e#1200#1227#0" expanded="true" />
+                <element signature="e#1453#1472#0" expanded="true" />
+                <element signature="e#1453#1472#0" expanded="true" />
+                <element signature="e#1486#1517#0" expanded="true" />
+                <element signature="e#1486#1517#0" expanded="true" />
+                <element signature="e#1531#1555#0" expanded="true" />
+                <element signature="e#1531#1555#0" expanded="true" />
+                <element signature="e#1569#1621#1" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1647#1900#0" expanded="true" />
+                <element signature="e#1995#2040#0" expanded="true" />
+                <element signature="e#1995#2040#0" expanded="true" />
+                <element signature="e#2054#2082#0" expanded="true" />
+                <element signature="e#2054#2082#0" expanded="true" />
+                <element signature="e#2096#2122#0" expanded="true" />
+                <element signature="e#2096#2122#0" expanded="true" />
+                <element signature="e#2136#2156#0" expanded="true" />
+                <element signature="e#2136#2156#0" expanded="true" />
+                <element signature="e#2481#2525#1" expanded="true" />
+                <element signature="e#2534#2566#0" expanded="true" />
+                <element signature="e#2534#2566#0" expanded="true" />
+                <element signature="e#2693#2747#1" expanded="true" />
+                <element signature="e#2788#2806#0" expanded="true" />
+                <element signature="e#2788#2806#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/Response.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdentityUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/IdentityUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+              <folding>
+                <element signature="e#231#263#1" expanded="true" />
+                <element signature="e#272#309#1" expanded="true" />
+                <element signature="e#322#328#0" expanded="true" />
+                <element signature="e#544#576#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state relative-caret-position="13">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#855#899#1" expanded="true" />
-                <element signature="e#1175#1298#0" expanded="true" />
-                <element signature="e#1175#1298#0" expanded="true" />
+                <element signature="e#1348#1371#1" expanded="true" />
+                <element signature="e#1380#1402#0" expanded="true" />
+                <element signature="e#1380#1402#0" expanded="true" />
+                <element signature="e#1412#1438#0" expanded="true" />
+                <element signature="e#1412#1438#0" expanded="true" />
+                <element signature="e#1448#1468#0" expanded="true" />
+                <element signature="e#1448#1468#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/UserService.java">
+      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/error.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="88">
+              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state relative-caret-position="144">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -177,9 +195,16 @@
       <list>
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>User</find>
+      <find>alert</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -588,17 +613,24 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/EmailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/nju/py/pyoodle/service/Impl/MailServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/test.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/register_success.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/error.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/error.html" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/IdentityUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/register.js" />
       </list>
     </option>
   </component>
@@ -631,6 +663,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -727,12 +761,57 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pyoodle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyoodle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyoodle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pyoodle" type="462c0819:PsiDirectoryNode" />
+              <item name="Impl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -750,6 +829,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1007,20 +1087,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548923297094</updated>
       <workItem from="1548923298347" duration="5701000" />
-      <workItem from="1548935897906" duration="10318000" />
+      <workItem from="1548935897906" duration="11523000" />
+      <workItem from="1548986666994" duration="15132000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MailServiceImplTest_sendEmail - 2019.01.31 at 22h 17m 17s.xml">
-      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MailServiceImplTest_sendEmail - 2019.01.31 at 22h 18m 10s.xml">
-      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MailServiceImplTest_sendEmail - 2019.01.31 at 22h 25m 30s.xml">
-      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MailServiceImplTest_sendEmail - 2019.01.31 at 22h 26m 55s.xml">
       <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
     </history-entry>
@@ -1042,43 +1114,53 @@
     <history-entry file="MailServiceImplTest_sendEmail - 2019.01.31 at 22h 35m 52s.xml">
       <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MailServiceImplTest_sendEmail - 2019.02.01 at 10h 13m 56s.xml">
+      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailServiceImplTest_sendEmail - 2019.02.01 at 10h 16m 15s.xml">
+      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MailServiceImplTest_sendEmail - 2019.02.01 at 10h 20m 53s.xml">
+      <configuration name="MailServiceImplTest.sendEmail" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16019000" />
+    <option name="totallyTimeSpent" value="32356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="790" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39972144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55013925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33008358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39972144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1099,17 +1181,158 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1460#1477#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#1156#1186#0" expanded="true" />
+            <element signature="e#1156#1186#0" expanded="true" />
+            <element signature="e#1200#1227#0" expanded="true" />
+            <element signature="e#1200#1227#0" expanded="true" />
+            <element signature="e#1453#1472#0" expanded="true" />
+            <element signature="e#1453#1472#0" expanded="true" />
+            <element signature="e#1486#1517#0" expanded="true" />
+            <element signature="e#1486#1517#0" expanded="true" />
+            <element signature="e#1531#1555#0" expanded="true" />
+            <element signature="e#1531#1555#0" expanded="true" />
+            <element signature="e#1569#1621#1" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1995#2040#0" expanded="true" />
+            <element signature="e#1995#2040#0" expanded="true" />
+            <element signature="e#2054#2082#0" expanded="true" />
+            <element signature="e#2054#2082#0" expanded="true" />
+            <element signature="e#2096#2122#0" expanded="true" />
+            <element signature="e#2096#2122#0" expanded="true" />
+            <element signature="e#2136#2156#0" expanded="true" />
+            <element signature="e#2136#2156#0" expanded="true" />
+            <element signature="e#2481#2525#1" expanded="true" />
+            <element signature="e#2534#2566#0" expanded="true" />
+            <element signature="e#2534#2566#0" expanded="true" />
+            <element signature="e#2693#2747#1" expanded="true" />
+            <element signature="e#2788#2806#0" expanded="true" />
+            <element signature="e#2788#2806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#881#904#1" expanded="true" />
+            <element signature="e#913#935#0" expanded="true" />
+            <element signature="e#913#935#0" expanded="true" />
+            <element signature="e#1386#1477#0" expanded="true" />
+            <element signature="e#1386#1477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1348#1371#1" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
-            <element signature="e#693#716#1" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#1014#1058#1" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1460#1477#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,14 +1345,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1150,73 +1366,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1348#1371#1" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
+        <state relative-caret-position="704">
           <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/EmailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/EmailService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/MailUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/nju/py/pyoodle/service/Impl/MailServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="320">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="e#731#754#1" expanded="true" />
-            <element signature="e#763#781#0" expanded="true" />
-            <element signature="e#763#781#0" expanded="true" />
-            <element signature="e#791#823#1" expanded="true" />
+            <element signature="e#791#833#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/PyoodleApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#855#899#1" expanded="true" />
-            <element signature="e#1175#1298#0" expanded="true" />
-            <element signature="e#1175#1298#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,97 +1425,215 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/moodle.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/register_success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="103">
+          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/EmailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#881#904#1" expanded="true" />
+            <element signature="e#913#935#0" expanded="true" />
+            <element signature="e#913#935#0" expanded="true" />
+            <element signature="e#1386#1477#0" expanded="true" />
+            <element signature="e#1386#1477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1348#1371#1" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1380#1402#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1412#1438#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+            <element signature="e#1448#1468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/IdentityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#231#263#1" expanded="true" />
+            <element signature="e#272#309#1" expanded="true" />
+            <element signature="e#322#328#0" expanded="true" />
+            <element signature="e#544#576#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="505">
+          <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
           <folding>
-            <element signature="e#693#716#1" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#1014#1058#1" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1426#1456#0" expanded="true" />
+            <element signature="e#1460#1477#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="110">
+          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="1036">
+          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#812#869#1" expanded="true" />
-            <element signature="e#1043#1100#1" expanded="true" />
-            <element signature="e#1113#1186#1" expanded="true" />
-            <element signature="e#1214#1238#0" expanded="true" />
-            <element signature="e#1253#1272#0" expanded="true" />
-            <element signature="e#1253#1272#0" expanded="true" />
-            <element signature="e#1286#1312#0" expanded="true" />
-            <element signature="e#1286#1312#0" expanded="true" />
-            <element signature="e#1326#1350#0" expanded="true" />
-            <element signature="e#1326#1350#0" expanded="true" />
-            <element signature="e#1364#1416#1" expanded="true" />
-            <element signature="e#1429#1636#1" expanded="true" />
-            <element signature="e#1442#1635#0" expanded="true" />
-            <element signature="e#1442#1635#0" expanded="true" />
-            <element signature="e#1442#1635#0" expanded="true" />
-            <element signature="e#1442#1635#0" expanded="true" />
-            <element signature="e#1442#1635#0" expanded="true" />
-            <element signature="e#2009#2053#1" expanded="true" />
-            <element signature="e#2062#2094#0" expanded="true" />
-            <element signature="e#2062#2094#0" expanded="true" />
-            <element signature="e#2238#2282#1" expanded="true" />
-            <element signature="e#2298#2325#0" expanded="true" />
-            <element signature="e#2337#2364#0" expanded="true" />
-            <element signature="e#2337#2378#0" expanded="true" />
-            <element signature="e#2337#2378#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#1156#1186#0" expanded="true" />
+            <element signature="e#1156#1186#0" expanded="true" />
+            <element signature="e#1200#1227#0" expanded="true" />
+            <element signature="e#1200#1227#0" expanded="true" />
+            <element signature="e#1453#1472#0" expanded="true" />
+            <element signature="e#1453#1472#0" expanded="true" />
+            <element signature="e#1486#1517#0" expanded="true" />
+            <element signature="e#1486#1517#0" expanded="true" />
+            <element signature="e#1531#1555#0" expanded="true" />
+            <element signature="e#1531#1555#0" expanded="true" />
+            <element signature="e#1569#1621#1" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1647#1900#0" expanded="true" />
+            <element signature="e#1995#2040#0" expanded="true" />
+            <element signature="e#1995#2040#0" expanded="true" />
+            <element signature="e#2054#2082#0" expanded="true" />
+            <element signature="e#2054#2082#0" expanded="true" />
+            <element signature="e#2096#2122#0" expanded="true" />
+            <element signature="e#2096#2122#0" expanded="true" />
+            <element signature="e#2136#2156#0" expanded="true" />
+            <element signature="e#2136#2156#0" expanded="true" />
+            <element signature="e#2481#2525#1" expanded="true" />
+            <element signature="e#2534#2566#0" expanded="true" />
+            <element signature="e#2534#2566#0" expanded="true" />
+            <element signature="e#2693#2747#1" expanded="true" />
+            <element signature="e#2788#2806#0" expanded="true" />
+            <element signature="e#2788#2806#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

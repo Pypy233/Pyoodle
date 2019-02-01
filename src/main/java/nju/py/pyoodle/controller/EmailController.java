@@ -6,9 +6,7 @@ import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: py
@@ -18,24 +16,33 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/register")
 public class EmailController {
-    @Autowired
-    private MailService mailService;
-    @Autowired
-    private UserDAO userDAO;
+    private final MailService mailService;
+    private final UserDAO userDAO;
 
-    @RequestMapping(value = "/mail")
+    @Autowired
+    public EmailController(MailService mailService, UserDAO userDAO) {
+        this.mailService = mailService;
+        this.userDAO = userDAO;
+    }
+
+    @PostMapping(value = "/mail")
     @ResponseBody
-    public Response<Boolean> sendEmail(String username, String email){
-        User user = userDAO.getUserByName(username);
-        new Thread(() -> mailService.sendEmail(user, email)).start();
+    public Response<Boolean> sendEmail(String username, String password, String email){
+        User user = new User();
+        user.setName(username);
+        new Thread(() -> mailService.sendEmail(user, password, email)).start();
         return new Response<>(true, "Mail have be sent...");
     }
 
-    @RequestMapping(value = "/activate")
-    public Response<Boolean> activateMail(String username, @RequestParam String token){
-        if (mailService.isActivate(username, token)) {
-            return new Response<>(true, "Succeed to activate...");
+    //  http://localhost:8080/
+    // register/activate?emailToken=cb757e1f-8c80-4900-8a6e-65c5da1d2d14
+    @GetMapping(value = "/activate")
+    public String activateMail(@RequestParam("emailToken") String token){
+        System.out.println("***********");
+        System.out.println(token);
+        if (mailService.isActivate(token)) {
+            return "/register_success.html";
         }
-        return new Response<>(false, "Fail to activate...");
+        return "";
     }
 }

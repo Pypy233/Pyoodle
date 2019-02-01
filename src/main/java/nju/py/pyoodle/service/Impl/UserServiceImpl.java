@@ -15,8 +15,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class UserServiceImpl implements UserService {
+    private final UserDAO userDAO;
+
     @Autowired
-    private UserDAO userDAO;
+    public UserServiceImpl(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
     @Override
     public boolean saveUser(String username, String pwd) {
@@ -45,7 +49,7 @@ public class UserServiceImpl implements UserService {
         System.out.println("*******");
         System.out.println(username);
         System.out.println(pwd);
-        if(user.getPassword().equals(pwd)) {
+        if(user.getPassword().equals(pwd) && user.getEnabled() == 1) {
             return new Response<>(true, "Succeed to index.html..");
         }
         else {

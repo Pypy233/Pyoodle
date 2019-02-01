@@ -12,7 +12,7 @@ $("#login").on('click', function () {
 function login() {
     var user = $('#Username').val();
     var password = $('#Password').val();
-    alert(password)
+
     $.ajax({
         type: "GET",
         url: "/login",
@@ -25,7 +25,7 @@ function login() {
         success: function (data) {
             alert(data.success)
             if (data.success) {
-               
+               window.location.href="/dashboard.html";
             } else
                 alert("Error!");
         },

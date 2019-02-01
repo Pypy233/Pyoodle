@@ -1,17 +1,15 @@
 package nju.py.pyoodle.controller;
 
 import nju.py.pyoodle.domain.User;
+import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.service.UserService;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.UUID;
 
 /**
  * @Author: py
@@ -21,8 +19,15 @@ import java.util.UUID;
 @Controller
 public class UserController {
 
+    private final UserService userService;
+
+    private final MailService mailService;
+
     @Autowired
-    private UserService userService;
+    public UserController(UserService userService, MailService mailService) {
+        this.userService = userService;
+        this.mailService = mailService;
+    }
 
 
     @RequestMapping("/")
@@ -39,8 +44,12 @@ public class UserController {
     @PostMapping("/register")
     @ResponseBody
     public Response<Boolean> register(String username, String password, String email) {
-
-        return new Response<>(false, "Fail to register");
+        User user = new User();
+        user.setName(username);
+        user.setPassword(password);
+        user.setEmail(email);
+        userService.saveUser(user);
+        return new Response<>(true, "Succeed to register");
 
     }
 

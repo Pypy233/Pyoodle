@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface MailService {
-    Response<Boolean> sendEmail(User user, String email);
+    Response<Boolean> sendEmail(User user, String password, String email);
 
     /**
      * Generate and save for next use
@@ -20,5 +20,5 @@ public interface MailService {
      */
     String generateConfirmationToken(User user);
 
-    boolean isActivate(String username, String token);
+    boolean isActivate(String token);
 }

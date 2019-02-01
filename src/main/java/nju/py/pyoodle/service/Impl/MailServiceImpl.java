@@ -3,7 +3,7 @@ package nju.py.pyoodle.service.Impl;
 import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.MailService;
-import nju.py.pyoodle.service.UserService;
+import nju.py.pyoodle.util.IdentityUtil;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -20,28 +20,42 @@ import java.util.UUID;
  */
 @Component
 public class MailServiceImpl implements MailService {
+    private final UserDAO userDAO;
+
+    private final static String SENDER = "2529716798@qq.com";
+    private final static String PWD = "xdiglmveggqudhif";
+
     @Autowired
-    private UserDAO userDAO;
+    public MailServiceImpl(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
 
     @Override
-    public Response<Boolean> sendEmail(User user, String email) {
+    public Response<Boolean> sendEmail(User user, String password, String email) {
         try {
             JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
             mailSender.setHost("smtp.qq.com");
-            mailSender.setUsername("2529716798@qq.com");
-            mailSender.setPassword("xdiglmveggqudhif");
+            mailSender.setUsername(SENDER);
+            mailSender.setPassword(PWD);
 
             MimeMessage mailMessage = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(mailMessage,true,"GBK");
+            MimeMessageHelper helper = new MimeMessageHelper(mailMessage,true,"utf8");
             helper.setFrom(mailSender.getUsername());
             helper.setTo(email);
-            helper.setSubject("title");
+            helper.setSubject("Moodle身份认证");
             helper.setText("邮件发送成功");
             String emailToken = generateConfirmationToken(user);
-            String url = "<a href='http://localhost:8088/activateMail?emailToken="+emailToken+"'>激活"+"</a></br><h1>如果以上超连接无法访问，请将以下网址复制到浏览器地址栏中</h1><h2>http://localhost:8088/activateMail?emailToken="+emailToken+"</h2>";
+            String url = "<a href='http://localhost:8080/register/activate?emailToken="+emailToken+"'>激活"+"" +
+                    "</a></br><h1>如果以上超连接无法访问，请将以下网址复制到浏览器地址栏中</h1>" +
+                    "<h2>http://localhost:8080/register/activate?emailToken="+emailToken+"</h2>";
             helper.setText(url, true);
             mailSender.send(mailMessage);
+            user.setType(IdentityUtil.getUserType(email));
+            user.setStudentNumber(email);
+            user.setPassword(password);
+            user.setEmail(email);
+            userDAO.save(user);
             return new Response<>(true, "Succeed to send email");
         }catch (Exception e){
             e.printStackTrace();
@@ -58,8 +72,13 @@ public class MailServiceImpl implements MailService {
     }
 
     @Override
-    public boolean isActivate(String username, String token) {
-        User user = userDAO.getUserByName(username);
-        return user.getConfirmationToken() != null && user.getConfirmationToken().equals(token);
+    public boolean isActivate(String token) {
+        User user = userDAO.getUserByConfirmationToken(token);
+        if (user != null) {
+            user.setEnabled(1);
+            userDAO.save(user);
+            return true;
+        }
+        return false;
     }
 }
