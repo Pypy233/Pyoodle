@@ -9,8 +9,6 @@ function sendEmail() {
     var password0 = $('#Password').val();
     var password1 = $('#Password1').val();
     var email = $('#email').val();
-    alert(password0)
-    alert(email)
     if (password0 != password1) {
        alert('密码不一致，请重新确认')
 

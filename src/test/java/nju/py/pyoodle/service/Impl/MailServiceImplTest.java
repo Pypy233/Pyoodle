@@ -26,7 +26,7 @@ public class MailServiceImplTest {
         User user = new User();
         user.setName("py");
         String lcx = "161250096@smail.nju.edu.cn";
-        mailService.sendEmail(user, lcx);
+      //  mailService.sendEmail(user, lcx);
     }
 
     @Test

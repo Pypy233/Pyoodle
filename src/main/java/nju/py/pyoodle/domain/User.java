@@ -4,6 +4,7 @@ import lombok.Data;
 import nju.py.pyoodle.enumeration.UserType;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @Author: py
@@ -33,5 +34,5 @@ public class User {
     @Column(name = "confirmation_token")
     private String confirmationToken;
 
-    
+
 }

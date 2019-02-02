@@ -13,10 +13,10 @@ public class IdentityUtil {
         char[] numArr = num[0].toCharArray();
         for(char c: numArr) {
             if(!Character.isDigit(c)) {
-                return UserType.STUDENT;
+                return UserType.TEACHER;
             }
         }
-        return UserType.TEACHER;
+        return UserType.STUDENT;
     }
 
     public static String getNumber(String email) {

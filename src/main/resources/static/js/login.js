@@ -23,9 +23,8 @@ function login() {
         },
        
         success: function (data) {
-            alert(data.success)
             if (data.success) {
-               window.location.href="/dashboard.html";
+               window.location.href="dashboard.html";
             } else
                 alert("Error!");
         },

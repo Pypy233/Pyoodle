@@ -52,7 +52,7 @@ public class MailServiceImpl implements MailService {
             helper.setText(url, true);
             mailSender.send(mailMessage);
             user.setType(IdentityUtil.getUserType(email));
-            user.setStudentNumber(email);
+            user.setStudentNumber(IdentityUtil.getNumber(email));
             user.setPassword(password);
             user.setEmail(email);
             userDAO.save(user);
