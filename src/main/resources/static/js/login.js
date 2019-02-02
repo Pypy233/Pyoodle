@@ -24,7 +24,13 @@ function login() {
        
         success: function (data) {
             if (data.success) {
-               window.location.href="dashboard.html";
+                if (data.data == 'STUDENT') {
+                    window.location.href="dashboard_student.html";
+                } else if (data.data == 'TEACHER') {
+                    window.location.href = "dashboard_teacher.html";
+                } else {
+                    window.location.href = "dashboard_admin.html";
+                }
             } else
                 alert("Error!");
         },
