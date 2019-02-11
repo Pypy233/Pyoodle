@@ -1,4 +1,3 @@
-
 $("#sendEmail").on('click', function () {
     sendEmail();
 });

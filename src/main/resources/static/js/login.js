@@ -24,6 +24,7 @@ function login() {
        
         success: function (data) {
             if (data.success) {
+                localStorage.username = user;
                 if (data.data == 'STUDENT') {
                     window.location.href="dashboard_student.html";
                 } else if (data.data == 'TEACHER') {
