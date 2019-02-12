@@ -1,6 +1,7 @@
 package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.User;
+import nju.py.pyoodle.enumeration.UserType;
 import nju.py.pyoodle.util.Response;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +17,14 @@ public interface UserService {
 
     void saveUser(User user);
 
-    Response<Boolean> canLogin(String username, String pwd);
+    Response<UserType> canLogin(String username, String pwd);
 
     Response<Boolean> updateUser(String name, String studentNumber);
 
     User findByEmail(String email);
 
     User indByConfirmationToken(String confirmationToken);
+
+    boolean updateInfo(String username, String password, String emil, String number);
 
 }

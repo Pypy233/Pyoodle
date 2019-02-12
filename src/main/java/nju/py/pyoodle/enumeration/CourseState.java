@@ -6,4 +6,5 @@ package nju.py.pyoodle.enumeration;
  * @Version 1.0
  */
 public enum CourseState {
+    Checking, Success, Fail
 }

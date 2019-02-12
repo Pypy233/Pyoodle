@@ -1,6 +1,7 @@
 package nju.py.pyoodle.domain;
 
 import lombok.Data;
+import nju.py.pyoodle.enumeration.CourseState;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,18 +13,23 @@ import java.util.List;
  */
 @Entity(name = "course_base")
 @Data
-public class CourseBase {
+public class  CourseBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
 
+    @Column(name = "pic_path")
+    private String picPath;
+
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private User teacher;
 
-    private int enabled;
+    @Enumerated(EnumType.STRING)
+    private CourseState state;
+
 
     @ElementCollection(fetch = FetchType.LAZY)
     private List<String> pptList;

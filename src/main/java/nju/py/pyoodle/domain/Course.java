@@ -1,6 +1,7 @@
 package nju.py.pyoodle.domain;
 
 import lombok.Data;
+import nju.py.pyoodle.enumeration.CourseState;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -17,6 +18,8 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private String name;
+
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private CourseBase courseBase;
 
@@ -24,6 +27,9 @@ public class Course {
     private User teacher;
 
     private LocalDate time;
+
+    @Enumerated(EnumType.STRING)
+    private CourseState state;
 
     @Column(name = "student_limit")
     private int limit;

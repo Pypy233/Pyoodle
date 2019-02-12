@@ -1,6 +1,7 @@
 package nju.py.pyoodle.controller;
 
 import nju.py.pyoodle.domain.User;
+import nju.py.pyoodle.enumeration.UserType;
 import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.service.UserService;
 import nju.py.pyoodle.util.Response;
@@ -37,7 +38,7 @@ public class UserController {
 
     @GetMapping("/login")
     @ResponseBody
-    public Response<Boolean> canLogin(String username, String password) {
+    public Response<UserType> canLogin(String username, String password) {
         return userService.canLogin(username, password);
     }
 
@@ -52,6 +53,10 @@ public class UserController {
         return new Response<>(true, "Succeed to register");
 
     }
+
+
+
+
 
 
 }

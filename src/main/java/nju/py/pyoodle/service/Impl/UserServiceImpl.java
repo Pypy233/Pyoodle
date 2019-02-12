@@ -2,6 +2,7 @@ package nju.py.pyoodle.service.Impl;
 
 import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.User;
+import nju.py.pyoodle.enumeration.UserType;
 import nju.py.pyoodle.service.UserService;
 import nju.py.pyoodle.util.Response;
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
@@ -40,17 +41,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response<Boolean> canLogin(String username, String pwd) {
+    public Response<UserType> canLogin(String username, String pwd) {
         User user = userDAO.getUserByName(username);
        // System.out.println(user.getName());
         if(user == null) {
             return new Response<>(false, null, "Fail to find user...");
         }
-        System.out.println("*******");
-        System.out.println(username);
-        System.out.println(pwd);
         if(user.getPassword().equals(pwd) && user.getEnabled() == 1) {
-            return new Response<>(true, "Succeed to index.html..");
+            return new Response<>(true, user.getType(), "Succeed to index.html..");
         }
         else {
 
@@ -71,5 +69,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public User indByConfirmationToken(String confirmationToken) {
         return userDAO.getUserByConfirmationToken(confirmationToken);
+    }
+
+    @Override
+    public boolean updateInfo(String username, String password, String emil, String number) {
+        User user = userDAO.getUserByName(username);
+
+        return false;
     }
 }
