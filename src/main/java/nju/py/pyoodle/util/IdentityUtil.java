@@ -16,7 +16,7 @@ public class IdentityUtil {
                 return UserType.TEACHER;
             }
         }
-        return UserType.STUDENT;
+        return UserType.UNDERGRADUATE;
     }
 
     public static String getNumber(String email) {

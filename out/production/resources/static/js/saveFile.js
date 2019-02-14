@@ -1,3 +1,4 @@
+document.write("<script language=javascript src='notification.js'></script>");
 $(document).ready(function () {
 
     $("#btnSubmit").click(function (event) {
@@ -7,8 +8,7 @@ $(document).ready(function () {
         pic_submit();
         fire_ajax_submit();
         hw_submit();
-
-
+        notifySuccess('申请已提交');
 
 
     });
@@ -49,6 +49,7 @@ function fire_ajax_submit() {
             $("#result").text(data);
             console.log("SUCCESS : ", data);
             $("#btnSubmit").prop("disabled", false);
+            notifySuccess('课件上传成功');
 
         },
         error: function (e) {
@@ -56,6 +57,7 @@ function fire_ajax_submit() {
             $("#result").text(e.responseText);
             console.log("ERROR : ", e);
             $("#btnSubmit").prop("disabled", false);
+            notifyDanger('课件上传失败');
 
         }
     });
@@ -91,6 +93,7 @@ function hw_submit() {
             $("#result").text(data);
             console.log("SUCCESS : ", data);
             $("#btnSubmit").prop("disabled", false);
+            notifySuccess('作业上传成功');
 
         },
         error: function (e) {
@@ -98,6 +101,7 @@ function hw_submit() {
             $("#result").text(e.responseText);
             console.log("ERROR : ", e);
             $("#btnSubmit").prop("disabled", false);
+            notifyDanger('作业上传失败');
 
         }
     });
@@ -132,6 +136,7 @@ function pic_submit() {
             $("#result").text(data);
             console.log("SUCCESS : ", data);
             $("#btnSubmit").prop("disabled", false);
+            notifySuccess('课程头像上传成功');
 
         },
         error: function (e) {
@@ -139,6 +144,7 @@ function pic_submit() {
             $("#result").text(e.responseText);
             console.log("ERROR : ", e);
             $("#btnSubmit").prop("disabled", false);
+            notifyDanger('课程头像上传失败');
 
         }
     });

@@ -10,6 +10,9 @@ import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.util.List;
+
 /**
  * @Author: py
  * @Date: 2019/2/2 上午10:56
@@ -40,6 +43,16 @@ public class CourseBaseServiceImpl implements CourseBaseService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to save course base...");
+        }
+    }
+
+    @Override
+    public Response<List<CourseBase>> listCourseBase() {
+        try {
+            return new Response<>(true, courseBaseDAO.findAll());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list");
         }
     }
 }

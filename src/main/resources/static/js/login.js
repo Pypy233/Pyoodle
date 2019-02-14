@@ -33,10 +33,10 @@ function login() {
                     window.location.href = "dashboard_admin.html";
                 }
             } else
-                alert("Error!");
+                notifyWarning('连接问题请重试');
         },
         error: function () {
-            alert("Network warning");
+            alert("连接问题请重试");
         }
     });
 }

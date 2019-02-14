@@ -1,3 +1,6 @@
+document.write("<script language=javascript src='notification.js'></script>");
+
+
 $("#sendEmail").on('click', function () {
     sendEmail();
 });
