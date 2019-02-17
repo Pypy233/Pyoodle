@@ -5,6 +5,7 @@ import nju.py.pyoodle.enumeration.CourseState;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @Author: py
@@ -35,4 +36,11 @@ public class Course {
     private int limit;
 
     private int classNum;
+
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Homework> homeworkList;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<User> students;
 }

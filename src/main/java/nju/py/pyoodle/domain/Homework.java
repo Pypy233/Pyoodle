@@ -3,6 +3,7 @@ package nju.py.pyoodle.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.lang.annotation.Documented;
 import java.time.LocalDate;
 
 /**
@@ -26,6 +27,8 @@ public class Homework {
     private LocalDate ddl;
 
     private String type;
+
+
 
 
 }

@@ -15,6 +15,7 @@ import java.util.List;
  * @Version 1.0
  */
 @RestController
+@RequestMapping("/courseBase")
 public class CourseBaseController {
     private final CourseBaseService courseBaseService;
 
@@ -24,15 +25,13 @@ public class CourseBaseController {
         this.courseBaseService = courseBaseService;
     }
 
-    @RequestMapping(value = "/courseBase/save", method = RequestMethod.POST)
+    @PostMapping(value = "/save")
     @ResponseBody
-    public Response<Boolean> saveCourseBase(String name, String teacherName) {
-        System.out.println(name);
-
-        return courseBaseService.saveCourseBase(name, teacherName);
+    public Response<Boolean> saveCourseBase(String courseName, String user) {
+        return courseBaseService.saveCourseBase(courseName, user);
     }
 
-    @GetMapping("/courseBase/show")
+    @GetMapping("/show")
     @ResponseBody
     public Response<List<CourseBase>> listCourseBase() {
         return courseBaseService.listCourseBase();

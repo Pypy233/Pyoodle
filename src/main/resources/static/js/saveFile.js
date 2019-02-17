@@ -1,20 +1,4 @@
 document.write("<script language=javascript src='notification.js'></script>");
-$(document).ready(function () {
-
-    $("#btnSubmit").click(function (event) {
-
-        //stop submit the form, we will post it manually.
-        event.preventDefault();
-        pic_submit();
-        fire_ajax_submit();
-        hw_submit();
-        notifySuccess('申请已提交');
-
-
-    });
-
-
-});
 
 
 
@@ -25,10 +9,11 @@ function fire_ajax_submit() {
     var form = $('#fileUploadForm')[0];
 
     var data = new FormData(form);
+    console.log(data.get('files'));
 
-    data.append("CustomField", "This is some extra data, testing");
-    data.append("courseName", $('#courseName').val());
-    data.append("user", localStorage.username);
+   // data.append("CustomField", "This is some extra data, testing");
+    data.append("courseName", localStorage.courseName);
+    //data.append("user", localStorage.username);
 
     $("#btnSubmit").prop("disabled", true);
 
@@ -64,6 +49,46 @@ function fire_ajax_submit() {
 
 }
 
+// function savePPT() {
+//     data.append("CustomField", "This is some extra data, testing");
+//     data.append("courseName", localStorage.courseName);
+//    // data.append("user", localStorage.username);
+//
+//     $("#btnSubmit").prop("disabled", true);
+//
+//
+//
+//     $.ajax({
+//         type: "POST",
+//         enctype: 'multipart/form-data',
+//         url: "/api/upload/multiPPT",
+//         data: data,
+//         //http://api.jquery.com/jQuery.ajax/
+//         //http://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+//         processData: false, //prevent jQuery from automatically transforming the data into a query string
+//         contentType: false,
+//         cache: false,
+//         timeout: 600000,
+//         success: function (data) {
+//
+//             $("#result").text(data);
+//             console.log("SUCCESS : ", data);
+//             $("#btnSubmit").prop("disabled", false);
+//             notifySuccess('课件上传成功');
+//
+//         },
+//         error: function (e) {
+//
+//             $("#result").text(e.responseText);
+//             console.log("ERROR : ", e);
+//             $("#btnSubmit").prop("disabled", false);
+//             notifyDanger('课件上传失败');
+//
+//         }
+//     });
+//
+// }
+
 function hw_submit() {
 
     // Get form
@@ -71,9 +96,10 @@ function hw_submit() {
 
     var data = new FormData(form);
 
-    data.append("CustomField", "This is some extra data, testing");
-    data.append("courseName", $('#courseName').val());
-    console.log(data['courseName']);
+    // data.append("CustomField", "This is some extra data, testing");
+    // console.log(localStorage.courseName)
+     data.append("courseName", localStorage.courseName);
+     // console.log(data['courseName']);
 
     $("#btnSubmit").prop("disabled", true);
 
@@ -114,8 +140,9 @@ function pic_submit() {
 
     var data = new FormData(form);
 
-    data.append("CustomField", "This is some extra data, testing");
-    data.append("courseName", $('#courseName').val());
+    //data.append("CustomField", "This is some extra data, testing");
+    console.log(localStorage.courseName)
+    data.append("courseName", localStorage.courseName);
     console.log(data['courseName']);
 
     $("#btnSubmit").prop("disabled", true);

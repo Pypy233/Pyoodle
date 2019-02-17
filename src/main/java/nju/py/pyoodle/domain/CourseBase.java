@@ -20,10 +20,6 @@ public class  CourseBase {
 
     private String name;
 
-    @Column(name = "pic_path")
-    private String picPath;
-
-
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private User teacher;
 

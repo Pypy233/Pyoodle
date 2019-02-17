@@ -31,9 +31,16 @@ public class DateUtil {
         return LocalDate.parse(res, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
-    public static void main(String[] args) {
-        System.out.println(DateUtil.parse("2018-12-2"));
-        System.out.println(DateUtil.parse("2018-1-24"));
-        System.out.println(DateUtil.parse("2018-1-2"));
+    public static LocalDate getNow() {
+        return LocalDate.now();
     }
+
+//    public static void main(String[] args) {
+////        System.out.println(DateUtil.parse("2018-12-2"));
+////        System.out.println(DateUtil.parse("2018-1-24"));
+////        System.out.println(DateUtil.parse("2018-1-2"));
+//        System.out.println(DateUtil.getNow());
+//    }
+
+
 }

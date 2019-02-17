@@ -18,10 +18,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/init.js"></script>
-<script src="js/courseBase.js"></script>
-<script src="js/saveFile.js"></script>
-<script src="js/notification.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/courseBase.js"></script>
+<script src="/js/saveFile.js"></script>
+<script src="/js/notification.js"></script>
+<script src="/js/courseBase.js"></script>
 <!--HEADER-->
 <header id="top-head" class="uk-position-fixed">
     <div class="uk-container uk-container-expand uk-background-primary">
@@ -110,14 +111,21 @@
             </li>
             <li class="uk-parent"><a href="#"><span data-uk-icon="icon: album" class="uk-margin-small-right"></span>上传文件</a>
                 <ul class="uk-nav-sub">
-                    <li><a title="上传课件" href="https://zzseba78.github.io/Kick-Off/article.html">创建课程</a></li>
-                    <li><a title="上传作业" href="https://zzseba78.github.io/Kick-Off/album.html">发布课程</a></li>
-                    <li><a title="上传成绩" href="https://zzseba78.github.io/Kick-Off/cover.html">查看课程</a></li>
+                    <li><a title="上传课件" href="https://zzseba78.github.io/Kick-Off/article.html">上传课件</a></li>
+                    <li><a title="上传作业" href="https://zzseba78.github.io/Kick-Off/album.html">上传作业</a></li>
+                    <li><a title="上传成绩" href="https://zzseba78.github.io/Kick-Off/cover.html">上传成绩</a></li>
                 </ul>
 
             </li>
             <li><a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>统计信息</a></li>
-            <li><a href="#"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>查看作业</a></li>
+            <li class="uk-parent"><a href="#"><span data-uk-icon="icon: album" class="uk-margin-small-right"></span>作业</a>
+                <ul class="uk-nav-sub">
+                    <li><a title="上传课件" href="https://zzseba78.github.io/Kick-Off/article.html">下载作业</a></li>
+                    <li><a title="上传作业" href="https://zzseba78.github.io/Kick-Off/album.html">群发邮件</a></li>
+
+                </ul>
+
+            </li>
             <li class="uk-parent">
                 <a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>讨论区</a>
                 <ul class="uk-nav-sub">
@@ -181,7 +189,9 @@
 
             <form method="POST" enctype="multipart/form-data" id="picUploadForm">
                 <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: image"></span>
+                    <span class="uk-form-icon">
+                        <img src="img/picture.svg" class="uk-responsive-width" data-uk-svg>
+                    </span>
                     <input type="file" name="files" class="uk-input uk-form-contrast"/><br/><br/>
                 </div>
             </form>
@@ -193,7 +203,10 @@
 
             <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
                 <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: push"></span>
+                    <span class="uk-form-icon">
+                        <img src="img/ppt.svg" class="uk-responsive-width" data-uk-svg>
+                    </span>
+
                 <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
                 </div>
             </form>
@@ -207,7 +220,9 @@
 
             <form method="POST" enctype="multipart/form-data" id="hwUploadForm">
                 <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: push"></span>
+                    <span class="uk-form-icon">
+                        <img src="img/homework.svg" class="uk-responsive-width " data-uk-svg>
+                    </span>
                     <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
                 </div>
             </form>
@@ -227,7 +242,27 @@
 </div>
     <!-- JS FILES -->
 
+    <script src="/js/notification.js"></script>
     <script src="/js/chartScripts.js"></script>
+    <script src="/js/saveFile.js"></script>
+    <script src="/js/courseBase.js"></script>
 </body>
+
+<script>
+
+    $("#btnSubmit").click(function (event) {
+        localStorage.courseName = $('#courseName').val();
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+        //savePPT();
+
+        fire_ajax_submit();
+        pic_submit();
+        hw_submit();
+        saveCourseBase();
+
+    });
+</script>
 
 </html>

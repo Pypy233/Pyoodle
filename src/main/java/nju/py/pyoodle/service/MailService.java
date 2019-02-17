@@ -20,5 +20,14 @@ public interface MailService {
      */
     String generateConfirmationToken(User user);
 
+    /**
+     * Send all students in course
+     * @param courseName
+     * @param title
+     * @param content
+     * @return
+     */
+    Response<Boolean> sendAll(String courseName, String title, String content);
+
     boolean isActivate(String token);
 }

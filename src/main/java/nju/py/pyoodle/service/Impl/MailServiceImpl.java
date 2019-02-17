@@ -1,6 +1,8 @@
 package nju.py.pyoodle.service.Impl;
 
+import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
+import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.util.IdentityUtil;
@@ -11,6 +13,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
 import javax.mail.internet.MimeMessage;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -21,13 +24,15 @@ import java.util.UUID;
 @Component
 public class MailServiceImpl implements MailService {
     private final UserDAO userDAO;
+    private final CourseDAO courseDAO;
 
     private final static String SENDER = "2529716798@qq.com";
     private final static String PWD = "xdiglmveggqudhif";
 
     @Autowired
-    public MailServiceImpl(UserDAO userDAO) {
+    public MailServiceImpl(UserDAO userDAO, CourseDAO courseDAO) {
         this.userDAO = userDAO;
+        this.courseDAO = courseDAO;
     }
 
 
@@ -69,6 +74,32 @@ public class MailServiceImpl implements MailService {
         user.setConfirmationToken(token);
         userDAO.save(user);
         return token;
+    }
+
+    @Override
+    public Response<Boolean> sendAll(String courseName, String title, String content) {
+        try {
+            Course course = courseDAO.getCourseByName(courseName);
+            List<User> userList = course.getStudents();
+            JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+            mailSender.setHost("smtp.qq.com");
+            mailSender.setUsername(SENDER);
+            mailSender.setPassword(PWD);
+
+            MimeMessage mailMessage = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(mailMessage,true,"utf8");
+            helper.setFrom(mailSender.getUsername());
+            helper.setSubject(title);
+            helper.setText(content);
+            for (User u: userList) {
+                helper.setTo(u.getEmail());
+                mailSender.send(mailMessage);
+            }
+            return new Response<>(true, "Succeed to send groups");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to send groups...");
+        }
     }
 
     @Override

@@ -16,4 +16,6 @@ public interface CourseDAO extends JpaRepository<Course, Integer> {
 
     List<Course> getCoursesByState(CourseState state);
 
+
+
 }

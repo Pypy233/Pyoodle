@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>创建课程</title>
+    <title>发布作业</title>
     <!-- CSS FILES -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
@@ -18,11 +18,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="/js/init.js"></script>
-<script src="/js/courseBase.js"></script>
-<script src="/js/saveFile.js"></script>
-<script src="/js/notification.js"></script>
-<script src="/js/courseBase.js"></script>
+<script src="js/init.js"></script>
+<script src="js/courseBase.js"></script>
+<script src="js/saveFile.js"></script>
+<script src="js/notification.js"></script>
+<script src="js/courseBase.js"></script>
 <!--HEADER-->
 <header id="top-head" class="uk-position-fixed">
     <div class="uk-container uk-container-expand uk-background-primary">
@@ -207,7 +207,7 @@
                         <img src="img/ppt.svg" class="uk-responsive-width" data-uk-svg>
                     </span>
 
-                <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
+                    <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
                 </div>
             </form>
 
@@ -240,27 +240,19 @@
 
     </fieldset>
 </div>
-    <!-- JS FILES -->
+<!-- JS FILES -->
 
-    <script src="/js/notification.js"></script>
-    <script src="/js/chartScripts.js"></script>
-    <script src="/js/saveFile.js"></script>
-    <script src="/js/courseBase.js"></script>
+<script src="/js/chartScripts.js"></script>
 </body>
 
 <script>
 
     $("#btnSubmit").click(function (event) {
-        localStorage.courseName = $('#courseName').val();
 
         //stop submit the form, we will post it manually.
-        event.preventDefault();
-        //savePPT();
-
-        fire_ajax_submit();
-        pic_submit();
         hw_submit();
-        saveCourseBase();
+        notifySuccess('作业上传成功');
+
 
     });
 </script>

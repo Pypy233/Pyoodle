@@ -39,10 +39,10 @@ public class FileUploader {
 
     // Multiple file upload
     @PostMapping("/api/upload/multiPPT")
-    public ResponseEntity<?> uploadFileMulti(String courseName, String user,
+    public ResponseEntity<?> uploadFileMulti(@RequestParam("courseName") String courseName,
             @RequestParam("files") MultipartFile[] uploadfiles) {
-        courseBaseService.saveCourseBase(courseName, user);
-        System.out.println("-------------" + courseName);
+        //courseBaseService.saveCourseBase(courseName, user);
+        System.out.println("ppt   " + courseName);
         String prefix = courseName + "/ppt";
         logger.debug("Multiple file upload!");
 
@@ -67,10 +67,11 @@ public class FileUploader {
     }
 
     @PostMapping("/api/upload/multiHW")
-    public ResponseEntity<?> uploadFileMultiHW(String courseName,
+    public ResponseEntity<?> uploadFileMultiHW(@RequestParam("courseName") String courseName,
                                              @RequestParam("files") MultipartFile[] uploadfiles) {
 
         String prefix = courseName + "/hw";
+        System.out.println("hw" + courseName);
         logger.debug("Multiple file upload!");
 
         String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
@@ -94,9 +95,11 @@ public class FileUploader {
     }
 
     @PostMapping("/api/upload/pic")
-    public ResponseEntity<?> uploadPicture(String courseName,
+    public ResponseEntity<?> uploadPicture(@RequestParam("courseName") String courseName,
                                                @RequestParam("files") MultipartFile[] uploadfiles) {
 
+        System.out.println("pic" + courseName);
+        System.out.println(uploadfiles[0].getName());
         String prefix = courseName + "/pic";
         logger.debug("Multiple file upload!");
 

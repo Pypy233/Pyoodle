@@ -1,6 +1,8 @@
 package nju.py.pyoodle.controller;
 
+import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
+import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.util.Response;
@@ -8,13 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @Author: py
  * @Date: 2019/1/31 下午11:12
  * @Version 1.0
  */
 @Controller
-@RequestMapping("/register")
 public class EmailController {
     private final MailService mailService;
     private final UserDAO userDAO;
@@ -25,7 +28,7 @@ public class EmailController {
         this.userDAO = userDAO;
     }
 
-    @PostMapping(value = "/mail")
+    @PostMapping(value = "/register/mail")
     @ResponseBody
     public Response<Boolean> sendEmail(String username, String password, String email){
         User user = new User();
@@ -36,7 +39,7 @@ public class EmailController {
 
     //  http://localhost:8080/
     // register/activate?emailToken=cb757e1f-8c80-4900-8a6e-65c5da1d2d14
-    @GetMapping(value = "/activate")
+    @GetMapping(value = "/register/activate")
     public String activateMail(@RequestParam("emailToken") String token){
         System.out.println("***********");
         System.out.println(token);
@@ -45,4 +48,12 @@ public class EmailController {
         }
         return "";
     }
+
+    @PostMapping(value = "/mail/all")
+    @ResponseBody
+    public Response<Boolean> sendAll(String courseName, String title, String content) {
+       return mailService.sendAll(courseName, title, content);
+    }
+
+
 }

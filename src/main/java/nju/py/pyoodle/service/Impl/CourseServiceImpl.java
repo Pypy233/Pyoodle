@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @Author: py
@@ -41,6 +42,16 @@ public class CourseServiceImpl implements CourseService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to save course...");
+        }
+    }
+
+    @Override
+    public Response<List<Course>> listPassedCourse() {
+        try {
+            return new Response<>(true, courseDAO.getCoursesByState(CourseState.Success));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list passed course...");
         }
     }
 }
