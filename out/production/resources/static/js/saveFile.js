@@ -1,8 +1,5 @@
 document.write("<script language=javascript src='notification.js'></script>");
 
-
-
-
 function fire_ajax_submit() {
 
     // Get form

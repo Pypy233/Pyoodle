@@ -14,9 +14,13 @@ import java.util.List;
  */
 @Service
 public interface CourseService {
-    Response<Boolean> saveCourse(String username, LocalDate time, int classNum, int limit);
+    Response<Boolean> saveCourse(String username, LocalDate time, int classNum, int limit, String courseBaseName);
 
     Response<List<Course>> listPassedCourse();
+
+    Response<Boolean> joinCourse(String courseName, String userName);
+
+    Response<List<Course>> listJoinableCourse(String userName);
 
 
 }

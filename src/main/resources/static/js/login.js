@@ -26,11 +26,11 @@ function login() {
             if (data.success) {
                 localStorage.username = user;
                 if (data.data == 'STUDENT') {
-                    window.location.href="dashboard_student.html";
+                    window.location.href="/dashboard_student.html";
                 } else if (data.data == 'TEACHER') {
-                    window.location.href = "dashboard_teacher.html";
+                    window.location.href = "/dashboard_teacher.html";
                 } else {
-                    window.location.href = "dashboard_admin.html";
+                    window.location.href = "/dashboard_admin.html";
                 }
             } else
                 notifyWarning('连接问题请重试');

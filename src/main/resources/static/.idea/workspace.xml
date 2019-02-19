@@ -2,18 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407697aa-af4a-4249-ad6a-9d8be2f697fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/config/ResourceConfigurer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cards.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/courseDisplay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/mail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/courseBaseCheck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/cover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/article.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/dashboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/loginDark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/newsBlog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/saveFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/saveFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/newsBlog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/price.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/CourseBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/CourseBaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseBaseCheck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_display.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/article.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/cover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/loginDark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/newsBlog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/saveFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/saveFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createHw.html" beforeDir="false" afterPath="$PROJECT_DIR$/createHw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,20 +53,38 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/course_display.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="88">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/course.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cards.html">
+        <entry file="file://$PROJECT_DIR$/js/courseDisplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="871" column="20" lean-forward="true" selection-start-line="871" selection-start-column="20" selection-end-line="871" selection-end-column="20" />
+            <state relative-caret-position="1540">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="70" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course_create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="266" column="24" selection-end-line="281" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -54,8 +94,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -65,6 +105,7 @@
       <find>saveCourse</find>
       <find>btnSubmit</find>
       <find>img</find>
+      <find>offcanvas-nav</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,21 +119,27 @@
         <option value="$PROJECT_DIR$/js/fileSave.js" />
         <option value="$PROJECT_DIR$/course.html" />
         <option value="$PROJECT_DIR$/js/register.js" />
-        <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/js/notification.js" />
-        <option value="$PROJECT_DIR$/dashboard_teacher.html" />
-        <option value="$PROJECT_DIR$/course_create.html" />
-        <option value="$PROJECT_DIR$/js/course.js" />
         <option value="$PROJECT_DIR$/courseBaseCheck.html" />
-        <option value="$PROJECT_DIR$/createHw.html" />
         <option value="$PROJECT_DIR$/course_base.html" />
         <option value="$PROJECT_DIR$/js/courseBase.js" />
         <option value="$PROJECT_DIR$/js/saveFile.js" />
+        <option value="$PROJECT_DIR$/js/course_display.js" />
+        <option value="$PROJECT_DIR$/dashboard_teacher.html" />
+        <option value="$PROJECT_DIR$/cards.html" />
+        <option value="$PROJECT_DIR$/course_create.html" />
         <option value="$PROJECT_DIR$/course_display.html" />
+        <option value="$PROJECT_DIR$/js/login.js" />
+        <option value="$PROJECT_DIR$/js/courseDisplay.js" />
+        <option value="$PROJECT_DIR$/createHw.html" />
+        <option value="$PROJECT_DIR$/mail.html" />
+        <option value="$PROJECT_DIR$/js/mail.js" />
+        <option value="$PROJECT_DIR$/js/course.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
@@ -105,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,7 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,17 +208,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.album.html">
+  <component name="RunManager" selected="JavaScript Debug.course_create.html">
     <configuration name="album.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/static/album.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="cards.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/static/cards.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="course_base.html" type="JavascriptDebugType" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/static/course_base.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="course_create.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/static/course_create.html" useBuiltInWebServerPort="true">
+    <configuration name="course_create.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/static/course_create.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="course_display.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63343/static/course_display.html" useBuiltInWebServerPort="true">
@@ -180,21 +224,24 @@
     <configuration name="createHw.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/static/createHw.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="mail.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/static/mail.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.course_base.html" />
-      <item itemvalue="JavaScript Debug.course_create.html" />
       <item itemvalue="JavaScript Debug.course_display.html" />
       <item itemvalue="JavaScript Debug.createHw.html" />
       <item itemvalue="JavaScript Debug.album.html" />
-      <item itemvalue="JavaScript Debug.cards.html" />
+      <item itemvalue="JavaScript Debug.mail.html" />
+      <item itemvalue="JavaScript Debug.course_create.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.album.html" />
-        <item itemvalue="JavaScript Debug.course_display.html" />
-        <item itemvalue="JavaScript Debug.cards.html" />
-        <item itemvalue="JavaScript Debug.createHw.html" />
         <item itemvalue="JavaScript Debug.course_create.html" />
+        <item itemvalue="JavaScript Debug.mail.html" />
+        <item itemvalue="JavaScript Debug.createHw.html" />
+        <item itemvalue="JavaScript Debug.course_display.html" />
+        <item itemvalue="JavaScript Debug.album.html" />
       </list>
     </recent_temporary>
   </component>
@@ -224,18 +271,20 @@
       <workItem from="1550211443733" duration="5284000" />
       <workItem from="1550240227907" duration="633000" />
       <workItem from="1550281866119" duration="8844000" />
-      <workItem from="1550472787336" duration="2267000" />
+      <workItem from="1550472787336" duration="4240000" />
+      <workItem from="1550504768434" duration="598000" />
+      <workItem from="1550560210299" duration="8203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70301000" />
+    <option name="totallyTimeSpent" value="81075000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="793" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="793" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928674" visible="true" weight="0.24665257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49928674" visible="true" weight="0.24665257" />
       <window_info id="Structure" order="1" sideWeight="0.5007133" side_tool="true" weight="0.24665257" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -247,7 +296,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32952926" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.25677603" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -258,15 +307,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/fileSave.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -297,24 +337,10 @@
     <entry file="file://$PROJECT_DIR$/dashboard_student.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard_teacher.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="258" column="4" lean-forward="true" selection-start-line="258" selection-start-column="4" selection-end-line="258" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/notification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428">
-          <caret line="23" selection-start-line="22" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -324,55 +350,14 @@
     <entry file="file://$PROJECT_DIR$/img/homework.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newsBlog.html" />
     <entry file="file://$PROJECT_DIR$/cover.html" />
-    <entry file="file://$PROJECT_DIR$/course_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="262" column="42" selection-start-line="262" selection-start-column="42" selection-end-line="262" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/error.html" />
-    <entry file="file://$PROJECT_DIR$/js/courseBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseBaseCheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/courseBaseCheck.html" />
     <entry file="file://$PROJECT_DIR$/js/saveFile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/album.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="369" column="38" lean-forward="true" selection-start-line="369" selection-start-column="38" selection-end-line="369" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -383,28 +368,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createHw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/login.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/loginDark.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/img/login.png" />
+    <entry file="file://$PROJECT_DIR$/img/loginDark.png" />
     <entry file="file://$PROJECT_DIR$/img/logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/moodle.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/newsBlog.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/img/newsBlog.png" />
     <entry file="file://$PROJECT_DIR$/img/n-logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -417,18 +389,12 @@
     <entry file="file://$PROJECT_DIR$/img/picture.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/dashboard.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/article.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/img/dashboard.png" />
+    <entry file="file://$PROJECT_DIR$/img/article.png" />
     <entry file="file://$PROJECT_DIR$/img/dashboard-logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/cover.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover.png" />
     <entry file="file://$PROJECT_DIR$/img/cover-logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -450,20 +416,91 @@
     <entry file="file://$PROJECT_DIR$/img/ppt.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/profile.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/album.html" />
     <entry file="file://$PROJECT_DIR$/cards.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="871" column="20" lean-forward="true" selection-start-line="871" selection-start-column="20" selection-end-line="871" selection-end-column="20" />
+        <state relative-caret-position="424">
+          <caret line="947" column="43" selection-start-line="947" selection-start-column="43" selection-end-line="947" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard_teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1577">
+          <caret line="95" column="75" selection-start-line="95" selection-start-column="75" selection-end-line="95" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="23" lean-forward="true" selection-start-line="22" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course_display.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="-635">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createHw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4512">
+          <caret line="259" column="7" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/profile.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="266" column="24" selection-end-line="281" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/courseBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2580">
+          <caret line="195" selection-start-line="195" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/courseDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="70" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
         </state>
       </provider>
     </entry>

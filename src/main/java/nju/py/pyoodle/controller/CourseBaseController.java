@@ -31,9 +31,9 @@ public class CourseBaseController {
         return courseBaseService.saveCourseBase(courseName, user);
     }
 
-    @GetMapping("/show")
+    @GetMapping("/showPS")
     @ResponseBody
-    public Response<List<CourseBase>> listCourseBase() {
+    public Response<List<CourseBase>> listCourseBasePassed() {
         return courseBaseService.listCourseBase();
     }
 

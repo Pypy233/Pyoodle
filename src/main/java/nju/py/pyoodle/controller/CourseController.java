@@ -28,14 +28,27 @@ public class CourseController {
 
     @PostMapping("/course/save")
     @ResponseBody
-    public Response<Boolean> saveCourse(String username, String time, int classNum, int limit) {
-        return courseService.saveCourse(username, DateUtil.parse(time), classNum, limit);
+    public Response<Boolean> saveCourse(String username, String time, int classNum, int limit, String courseBaseName) {
+        return courseService.saveCourse(username, DateUtil.parse(time), classNum, limit, courseBaseName);
     }
 
     @GetMapping("/course/passed")
     @ResponseBody
     public Response<List<Course>> listCourse() {
         return courseService.listPassedCourse();
+    }
+
+    @PostMapping("/course/join")
+    @ResponseBody
+    public Response<Boolean> joinCourse(String courseName, String userName) {
+        return courseService.joinCourse(courseName, userName);
+    }
+
+
+    @GetMapping("/course/listJoin")
+    @ResponseBody
+    public Response<List<Course>> listJoinableCourse(String userName) {
+        return courseService.listJoinableCourse(userName);
     }
 
 }

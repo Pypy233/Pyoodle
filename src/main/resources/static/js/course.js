@@ -14,13 +14,13 @@ function listCourse() {
 
     $.ajax({
         type: "GET",
-        url: "/courseBase/show",
+        url: "/courseBase/showPS",
         dataType: "json",
         success: function (data) {
             if (data.success) {
                 var stub = data.data;
                 for(var i = 0; i < stub.length; i++) {
-                    s = '<option value="1">' + stub[i]['name'] + '</option>';
+                    s = '<option value="' + stub[i]['name'] + '">' + stub[i]['name'] + '</option>';
                     $("#coursebtn").append(s);
                 }
             } else
@@ -38,6 +38,7 @@ function saveCourse() {
         url: "/course/save",
         data: {
             username: localStorage.username,
+            courseBaseName: $("#coursebtn").val(),
             time: $('#datepicker').val(),
             classNum: parseInt($('#classbtn').val()),
             limit: parseInt($('#limit').val())
