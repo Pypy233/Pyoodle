@@ -2,43 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6ed9d7-2dd7-4eac-b573-ddbab8aa5901" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/config/ResourceConfigurer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/cards.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/courseDisplay.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mail.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/mail.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/course_select.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/table.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/courseSelect.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/resources/static/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/album.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/article.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/courseBaseCheck.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/course_create.html" afterPath="$PROJECT_DIR$/out/production/resources/static/course_create.html" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/course_display.html" afterPath="$PROJECT_DIR$/out/production/resources/static/course_display.html" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/cover.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/dashboard_teacher.html" afterPath="$PROJECT_DIR$/out/production/resources/static/dashboard_teacher.html" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/error.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/article.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/cover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/dashboard.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/login.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/loginDark.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/newsBlog.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/login.js" afterPath="$PROJECT_DIR$/out/production/resources/static/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/saveFile.js" afterPath="$PROJECT_DIR$/out/production/resources/static/js/saveFile.js" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/newsBlog.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/price.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/test.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseController.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseService.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/course_create.html" afterPath="$PROJECT_DIR$/src/main/resources/static/course_create.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/course_display.html" afterPath="$PROJECT_DIR$/src/main/resources/static/course_display.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/createHw.html" afterPath="$PROJECT_DIR$/src/main/resources/static/createHw.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dashboard_student.html" afterPath="$PROJECT_DIR$/src/main/resources/static/dashboard_student.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/dashboard_teacher.html" afterPath="$PROJECT_DIR$/src/main/resources/static/dashboard_teacher.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/course.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/course.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -60,8 +34,21 @@
       <file leaf-file-name="CourseBaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+              <folding>
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseBaseService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -77,16 +64,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseBaseServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CourseBaseServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="267">
+              <caret line="50" column="95" lean-forward="false" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1140#1181#0" expanded="true" />
                 <element signature="e#1140#1181#0" expanded="true" />
+                <element signature="e#2033#2167#0" expanded="true" />
+                <element signature="e#2033#2167#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseBaseDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/CourseBaseDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="1526">
               <caret line="94" column="46" lean-forward="false" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -615,9 +614,7 @@
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/enumeration/UserType.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/IdentityUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/domain/CourseBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/CourseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/MailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/MailServiceImpl.java" />
@@ -631,11 +628,13 @@
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/HomeworkController.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/FileUploader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/config/ResourceConfigurer.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -1198,7 +1197,7 @@
       <workItem from="1550238143662" duration="2393000" />
       <workItem from="1550282191000" duration="11992000" />
       <workItem from="1550473227390" duration="199000" />
-      <workItem from="1550561301496" duration="8258000" />
+      <workItem from="1550561301496" duration="10604000" />
     </task>
     <servers />
   </component>
@@ -1235,11 +1234,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117928000" />
+    <option name="totallyTimeSpent" value="120274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1248,10 +1246,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31586206" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31586206" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32551724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32551724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1471,13 +1469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/CourseBaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/CourseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1565,14 +1556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/util/FileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
@@ -1619,31 +1602,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="37" column="23" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1140#1181#0" expanded="true" />
-            <element signature="e#1140#1181#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,9 +1640,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/dao/CourseBaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/CourseBaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="1526">
           <caret line="94" column="46" lean-forward="false" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1716,6 +1695,31 @@
             <element signature="e#3236#3255#0" expanded="true" />
             <element signature="e#3346#3487#0" expanded="true" />
             <element signature="e#3346#3487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/controller/CourseBaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nju/py/pyoodle/service/Impl/CourseBaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="50" column="95" lean-forward="false" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1140#1181#0" expanded="true" />
+            <element signature="e#1140#1181#0" expanded="true" />
+            <element signature="e#2033#2167#0" expanded="true" />
+            <element signature="e#2033#2167#0" expanded="true" />
           </folding>
         </state>
       </provider>

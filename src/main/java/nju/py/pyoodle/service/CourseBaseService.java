@@ -16,5 +16,7 @@ import java.util.List;
 public interface CourseBaseService {
     Response<Boolean> saveCourseBase(String name, String teacherName);
 
-    Response<List<CourseBase>> listCourseBase();
+    Response<List<CourseBase>> listCourseBasePass();
+
+    Response<List<CourseBase>> listCourseBaseCheck();
 }

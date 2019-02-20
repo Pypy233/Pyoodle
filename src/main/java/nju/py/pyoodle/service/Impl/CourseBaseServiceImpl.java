@@ -46,12 +46,22 @@ public class CourseBaseServiceImpl implements CourseBaseService {
     }
 
     @Override
-    public Response<List<CourseBase>> listCourseBase() {
+    public Response<List<CourseBase>> listCourseBasePass() {
         try {
-            return new Response<>(true, courseBaseDAO.findAll());
+            return new Response<>(true, courseBaseDAO.getCourseBasesByState(CourseState.Success));
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to list");
+        }
+    }
+
+    @Override
+    public Response<List<CourseBase>> listCourseBaseCheck() {
+        try {
+            return new Response<>(true, courseBaseDAO.getCourseBasesByState(CourseState.Checking));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list course...");
         }
     }
 }

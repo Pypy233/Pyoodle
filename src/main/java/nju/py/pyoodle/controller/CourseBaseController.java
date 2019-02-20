@@ -34,9 +34,13 @@ public class CourseBaseController {
     @GetMapping("/showPS")
     @ResponseBody
     public Response<List<CourseBase>> listCourseBasePassed() {
-        return courseBaseService.listCourseBase();
+        return courseBaseService.listCourseBasePass();
     }
 
-
+    @GetMapping("/showCheck")
+    @ResponseBody
+    public Response<List<CourseBase>> listCourseCheck() {
+        return courseBaseService.listCourseBaseCheck();
+    }
 
 }
