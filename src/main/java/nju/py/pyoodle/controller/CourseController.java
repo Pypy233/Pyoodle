@@ -4,6 +4,7 @@ import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,7 +48,7 @@ public class CourseController {
 
     @GetMapping("/course/listJoin")
     @ResponseBody
-    public Response<List<Course>> listJoinableCourse(String userName) {
+    public Response<List<JoinableCourse>> listJoinableCourse(String userName) {
         return courseService.listJoinableCourse(userName);
     }
 

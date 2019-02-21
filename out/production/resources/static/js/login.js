@@ -25,12 +25,12 @@ function login() {
         success: function (data) {
             if (data.success) {
                 localStorage.username = user;
-                if (data.data == 'STUDENT') {
-                    window.location.href="/dashboard_student.html";
+                if (data.data == 'admin') {
+                    window.location.href="/dashboard_admin.html";
                 } else if (data.data == 'TEACHER') {
                     window.location.href = "/dashboard_teacher.html";
                 } else {
-                    window.location.href = "/dashboard_admin.html";
+                    window.location.href = "/dashboard_student.html";
                 }
             } else
                 notifyWarning('连接问题请重试');

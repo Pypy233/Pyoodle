@@ -2,6 +2,7 @@ package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -20,7 +21,7 @@ public interface CourseService {
 
     Response<Boolean> joinCourse(String courseName, String userName);
 
-    Response<List<Course>> listJoinableCourse(String userName);
+    Response<List<JoinableCourse>> listJoinableCourse(String userName);
 
 
 }

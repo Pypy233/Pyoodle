@@ -35,6 +35,8 @@ public class Course {
     @Column(name = "student_limit")
     private int limit;
 
+    private int current;
+
     private int classNum;
 
 

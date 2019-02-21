@@ -8,6 +8,7 @@ import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -80,16 +81,16 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Response<List<Course>> listJoinableCourse(String userName) {
+    public Response<List<JoinableCourse>> listJoinableCourse(String userName) {
        try {
            List<Course> courseList = courseDAO.getCoursesByState(CourseState.Success);
-           List<Course> resList = new ArrayList<>();
+           List<JoinableCourse> resList = new ArrayList<>();
 
            User user = userDAO.getUserByName(userName);
 
            for (Course course: courseList) {
                if (!course.getStudents().contains(user)) {
-                   resList.add(course);
+                   resList.add(new JoinableCourse(course));
                }
            }
            return new Response<>(true, resList);

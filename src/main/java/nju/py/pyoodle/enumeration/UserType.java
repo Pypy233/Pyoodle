@@ -6,5 +6,5 @@ package nju.py.pyoodle.enumeration;
  * @Version 1.0
  */
 public enum UserType {
-    TEACHER, ADMIN, UNDERGRADUATE, MASTER, DOCTOR
+    TEACHER, ADMIN, FRESH, JUNIOR, UNDERGRADUATE, MASTER;
 }
