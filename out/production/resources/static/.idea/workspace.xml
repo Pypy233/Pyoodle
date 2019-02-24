@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="407697aa-af4a-4249-ad6a-9d8be2f697fc" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/js/courseBaseCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/download.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course_base_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_base_check.html" afterDir="false" />
     </list>
@@ -45,16 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/course_base_check.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="297">
               <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/download.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -144,6 +153,7 @@
         <option value="$PROJECT_DIR$/css/table.css" />
         <option value="$PROJECT_DIR$/course_base_check.html" />
         <option value="$PROJECT_DIR$/js/courseBaseCheck.js" />
+        <option value="$PROJECT_DIR$/js/download.js" />
       </list>
     </option>
   </component>
@@ -286,17 +296,18 @@
       <workItem from="1550729825859" duration="1706000" />
       <workItem from="1550762511764" duration="248000" />
       <workItem from="1550840529522" duration="2000" />
+      <workItem from="1550918655018" duration="176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95448000" />
+    <option name="totallyTimeSpent" value="95624000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="803" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928674" visible="true" weight="0.24665257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49928674" visible="true" weight="0.24665257" />
       <window_info id="Structure" order="1" sideWeight="0.5007133" side_tool="true" weight="0.24665257" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -319,9 +330,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/homework.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/newsBlog.html" />
     <entry file="file://$PROJECT_DIR$/cover.html" />
     <entry file="file://$PROJECT_DIR$/error.html" />
@@ -544,13 +552,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/course_base_check.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="297">
           <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/download.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

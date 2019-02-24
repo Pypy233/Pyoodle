@@ -5,11 +5,8 @@ import nju.py.pyoodle.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
@@ -37,13 +34,17 @@ public class FileController {
     private final static String DOWNLOAD_PATH = "/Users/py/Downloads/";
 
 
-    @Autowired
-    private CourseBaseService courseBaseService;
+    private final CourseBaseService courseBaseService;
 
     private final Logger logger = LoggerFactory.getLogger(FileController.class);
 
     //Save the uploaded file to this folder
     private static String UPLOADED_FOLDER = "/Users/py/J2EEStrorage/";
+
+    @Autowired
+    public FileController(CourseBaseService courseBaseService) {
+        this.courseBaseService = courseBaseService;
+    }
 
 
     // Multiple file upload
@@ -80,7 +81,6 @@ public class FileController {
                                                @RequestParam("files") MultipartFile[] uploadfiles) {
 
         String prefix = courseName + "/hw";
-        System.out.println("hw" + courseName);
         logger.debug("Multiple file upload!");
 
         String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())

@@ -100,4 +100,29 @@ public class CourseServiceImpl implements CourseService {
            return new Response<>(false, "Fail to list joinable course...");
 
        }    }
+
+    @Override
+    public Response<Boolean> checkCourse(List<String> coursePassMap) {
+        try {
+            for (String pair : coursePassMap) {
+                String[] arr = pair.split(",");
+                String courseName = arr[0];
+                String teacherName = arr[1];
+
+                User user = userDAO.getUserByName(teacherName);
+                Course course = courseDAO.getCourseByNameAndTeacher(courseName, user);
+                if ( arr[2].equals("true") ) {
+                    course.setState(CourseState.Success);
+                }else {
+                    course.setState(CourseState.Fail);
+                }
+
+                courseDAO.save(course);
+            }
+            return new Response<>(true, "Succeed to check course list...");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to check course list...");
+        }
+    }
 }

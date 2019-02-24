@@ -23,5 +23,7 @@ public interface CourseService {
 
     Response<List<JoinableCourse>> listJoinableCourse(String userName);
 
+    Response<Boolean> checkCourse(List<String> coursePassMap);
+
 
 }

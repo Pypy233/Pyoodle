@@ -64,4 +64,27 @@ public class CourseBaseServiceImpl implements CourseBaseService {
             return new Response<>(false, "Fail to list course...");
         }
     }
+
+    @Override
+    public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
+        try {
+            for (String pair : courseBasePassMap) {
+                String[] arr = pair.split(",");
+                String courseBaseName = arr[0];
+
+                CourseBase course = courseBaseDAO.getCourseBaseByName(courseBaseName);
+                if ( arr[1].equals("true") ) {
+                    course.setState(CourseState.Success);
+                }else {
+                    course.setState(CourseState.Fail);
+                }
+
+                courseBaseDAO.save(course);
+            }
+            return new Response<>(true, "Succeed to check course base list...");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to check course base list...");
+        }
+    }
 }

@@ -45,6 +45,13 @@ public class CourseController {
         return courseService.joinCourse(courseName, userName);
     }
 
+    // Given a String[] with courseName,username,passed(true or false)
+    @PostMapping("/course/check")
+    @ResponseBody
+    public Response<Boolean> checkCourse(List<String> coursePassMap) {
+        return courseService.checkCourse(coursePassMap);
+    }
+
 
     @GetMapping("/course/listJoin")
     @ResponseBody

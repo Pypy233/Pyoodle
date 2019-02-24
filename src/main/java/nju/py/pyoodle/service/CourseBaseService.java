@@ -19,4 +19,6 @@ public interface CourseBaseService {
     Response<List<CourseBase>> listCourseBasePass();
 
     Response<List<CourseBase>> listCourseBaseCheck();
+
+    Response<Boolean> checkCourseBase(List<String> courseBasePassMap);
 }

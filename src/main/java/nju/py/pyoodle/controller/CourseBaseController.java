@@ -43,4 +43,12 @@ public class CourseBaseController {
         return courseBaseService.listCourseBaseCheck();
     }
 
+
+    // Given a String[] with courseName,passed(true or false)
+    @PostMapping("/courseBase/check")
+    @ResponseBody
+    public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
+        return courseBaseService.checkCourseBase(courseBasePassMap);
+    }
+
 }
