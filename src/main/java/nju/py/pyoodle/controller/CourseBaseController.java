@@ -4,7 +4,6 @@ import nju.py.pyoodle.domain.CourseBase;
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,10 +44,11 @@ public class CourseBaseController {
 
 
     // Given a String[] with courseName,passed(true or false)
-    @PostMapping("/courseBase/check")
+    @PostMapping("/check")
     @ResponseBody
     public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
         return courseBaseService.checkCourseBase(courseBasePassMap);
     }
 
+    
 }

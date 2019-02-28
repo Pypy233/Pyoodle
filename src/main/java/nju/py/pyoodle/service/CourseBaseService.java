@@ -1,7 +1,6 @@
 package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.CourseBase;
-import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.util.Response;
 import org.springframework.stereotype.Service;
 

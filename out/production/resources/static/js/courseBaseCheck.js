@@ -3,68 +3,66 @@ $(document).ready(function () {
     init_table();
 
     $("#btnSubmit").click(function (event) {
-        join_course();
+        get_chosen_area();
 
     });
 
 
 });
 
-function join_course() {
-    var chk = $("input[name = 'box']");
-    var chosenK = []
-    for (k in chk) {
-        if (chk[k].checked) {
-            chosenK.push(chk[k].value);
-            alert(chosenK);
+function list_course_to_be_checked() {
+    $.ajax({
+        type: "GET",
+        url: "/courseBase/showCheck",
+        dataType: "json",
+
+        success: function (data) {
+            if (data.success) {
+                var stub = data.data;
+                return stub;
+            } else
+                notifyWarning('连接问题请重试');
+        },
+        error: function () {
+            alert("连接问题请重试");
         }
-    }
+    });
 }
 
+
+
 function init_table() {
-    var stub = [{'name': '操作系统', 'teacher': 'whr'}, {'name': '数据结构', 'time': '2019-03-03', 'limit': 230, 'current': 100, 'teacher': 'fx'}]
+    var stub = list_course_to_be_checked();
+    console.log(stub[0]['name']);
+
     var s1 = ' <tbody>\n' +
         '            <tr>\n' +
-        '                <td>';
-
+        '                <td class="uk-text-truncate">';
     var s2 = '</td>\n' +
-        '                <td>';
+        '                <td class="uk-text-truncate">';
     var s3 = '</td>\n' +
-        '                <td class="uk-text-truncate">';
-    // '                    <a class="uk-link-reset" href=""></a>' +
-    // '';
-    var s4 = '</td>\n' +
-        '                <td class="uk-text-truncate">';
-    var s5 = '</td>\n' +
-        '                <td class="uk-text-truncate">';
-    var s6 = '            </td>\n</tr>\n' +
-        '\n' +
-        '            </tbody>';
-    // for (var i = 0; i < stub.length; i++) {
-    //     var s = s1 + stub[i]['name'] + s2 + s3 + stub[i]['time'] + s4 + stub[i]['name'] + s5 + stub[i]['t'] + s6 + stub[i]['limit'] + s5 + stub[i]['current'] + s7;
-    //     $('#course_table').append(s);
-    // }
-    // $.ajax({
-    //     type: "GET",
-    //     url: "/course/listJoin",
-    //     dataType: "json",
-    //     data: {userName: localStorage.username},
-    //
-    //     success: function (data) {
-    //         if (data.success) {
-    //             var stub = data.data;
-    //             for (var i = 0; i < stub.length; i++) {
-    //                 var s = s1 + stub[i]['name'] + s2 + s3 + localDateForMat(stub[i]['time']) + s4 + stub[i]['name'] + s5 + stub[i]['teacher'] + s6 + stub[i]['limit'] + s5 + stub[i]['current'] + s7;
-    //                 $('#course_table').append(s);
-    //             }
-    //         } else
-    //             notifyWarning('连接问题请重试');
-    //     },
-    //     error: function () {
-    //         alert("连接问题请重试");
-    //     }
-    // });
+        '                <td class="uk-text-truncate"><label><input class="uk-radio" type="radio" name="' ;
+    var s4 = '_1"> 通过</label>\n' +
+        '                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label><input class="uk-radio" type="radio" name="';
+    var s5 = '_0"> 拒绝</label></td>\n' +
+        '            </tr>\n' +
+        '   ';
+    for (var i = 0; i < stub.length; i++) {
+        var s = s1 + stub[i]['name'] + s2 + stub[i]['teacher']['name'] + s3 + stub[i]['name'] + s4 + stub[i]['name'] + s5;
+        $('#course_table').append(s);
+    }
 
 
+
+
+}
+
+function get_chosen_area () {
+    var radios = $('.uk-radio');
+    for (radio in radios) {
+        if (radios[radio].checked) {
+            alert(radios[radio].name);
+        }
+    }
 
 }

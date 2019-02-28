@@ -1,16 +1,15 @@
 package nju.py.pyoodle.controller;
 
-import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
-import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.MailService;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Author: py
@@ -20,12 +19,10 @@ import java.util.List;
 @Controller
 public class EmailController {
     private final MailService mailService;
-    private final UserDAO userDAO;
 
     @Autowired
     public EmailController(MailService mailService, UserDAO userDAO) {
         this.mailService = mailService;
-        this.userDAO = userDAO;
     }
 
     @PostMapping(value = "/register/mail")
@@ -41,8 +38,6 @@ public class EmailController {
     // register/activate?emailToken=cb757e1f-8c80-4900-8a6e-65c5da1d2d14
     @GetMapping(value = "/register/activate")
     public String activateMail(@RequestParam("emailToken") String token){
-        System.out.println("***********");
-        System.out.println(token);
         if (mailService.isActivate(token)) {
             return "/register_success.html";
         }

@@ -23,9 +23,10 @@ function login() {
         },
        
         success: function (data) {
+            console.log(user)
             if (data.success) {
                 localStorage.username = user;
-                if (data.data == 'admin') {
+                if (user === 'admin') {
                     window.location.href="/dashboard_admin.html";
                 } else if (data.data == 'TEACHER') {
                     window.location.href = "/dashboard_teacher.html";
