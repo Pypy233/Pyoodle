@@ -2,6 +2,7 @@ package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,8 @@ public interface CourseService {
     Response<List<JoinableCourse>> listJoinableCourse(String userName);
 
     Response<Boolean> checkCourse(List<String> coursePassMap);
+
+    Response<List<CourseVO>> listToBeCheckedCourse();
 
 
 }

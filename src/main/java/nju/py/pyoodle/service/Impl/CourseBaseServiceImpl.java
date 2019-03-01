@@ -2,14 +2,18 @@ package nju.py.pyoodle.service.Impl;
 
 import nju.py.pyoodle.dao.CourseBaseDAO;
 import nju.py.pyoodle.dao.UserDAO;
+import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.CourseBase;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.CourseBaseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,9 +60,14 @@ public class CourseBaseServiceImpl implements CourseBaseService {
     }
 
     @Override
-    public Response<List<CourseBase>> listCourseBaseCheck() {
+    public Response<List<CourseBaseVO>> listCourseBaseCheck() {
         try {
-            return new Response<>(true, courseBaseDAO.getCourseBasesByState(CourseState.Checking));
+            List<CourseBase> courseBaseList = courseBaseDAO.getCourseBasesByState(CourseState.Checking);
+            List<CourseBaseVO> courseBaseVOList = new ArrayList<>();
+            for (CourseBase courseBase: courseBaseList) {
+                courseBaseVOList.add(new CourseBaseVO(courseBase));
+            }
+            return new Response<>(true, courseBaseVOList);
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to list course...");
@@ -66,16 +75,16 @@ public class CourseBaseServiceImpl implements CourseBaseService {
     }
 
     @Override
-    public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
+    public Response<Boolean> checkCourseBase( List<String> courseBasePassMap) {
         try {
             for (String pair : courseBasePassMap) {
-                String[] arr = pair.split(",");
+                String[] arr = pair.split("_");
                 String courseBaseName = arr[0];
 
                 CourseBase course = courseBaseDAO.getCourseBaseByName(courseBaseName);
-                if ( arr[1].equals("true") ) {
+                if ( arr[1].equals("1") ) {
                     course.setState(CourseState.Success);
-                }else {
+                } else {
                     course.setState(CourseState.Fail);
                 }
 

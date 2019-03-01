@@ -1,8 +1,10 @@
 package nju.py.pyoodle.controller;
 
 import nju.py.pyoodle.domain.CourseBase;
+import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.CourseBaseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +40,7 @@ public class CourseBaseController {
 
     @GetMapping("/showCheck")
     @ResponseBody
-    public Response<List<CourseBase>> listCourseCheck() {
+    public Response<List<CourseBaseVO>> listCourseCheck() {
         return courseBaseService.listCourseBaseCheck();
     }
 
@@ -46,7 +48,7 @@ public class CourseBaseController {
     // Given a String[] with courseName,passed(true or false)
     @PostMapping("/check")
     @ResponseBody
-    public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
+    public Response<Boolean> checkCourseBase(@RequestParam("") List<String> courseBasePassMap) {
         return courseBaseService.checkCourseBase(courseBasePassMap);
     }
 

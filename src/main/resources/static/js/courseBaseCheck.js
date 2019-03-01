@@ -3,38 +3,36 @@ $(document).ready(function () {
     init_table();
 
     $("#btnSubmit").click(function (event) {
-        get_chosen_area();
-
+        list_course_to_be_checked();
     });
 
 
 });
 
 function list_course_to_be_checked() {
+
     $.ajax({
-        type: "GET",
-        url: "/courseBase/showCheck",
+        type: "POST",
+        url: "/courseBase/check",
+        data: "courseBasePassMap=" + get_chosen_area(),
         dataType: "json",
 
         success: function (data) {
             if (data.success) {
-                var stub = data.data;
-                return stub;
+                notifySuccess('成功审批开课信息');
             } else
-                notifyWarning('连接问题请重试');
+                alert('连接问题请重试');
         },
         error: function () {
             alert("连接问题请重试");
         }
     });
+
 }
 
 
 
 function init_table() {
-    var stub = list_course_to_be_checked();
-    console.log(stub[0]['name']);
-
     var s1 = ' <tbody>\n' +
         '            <tr>\n' +
         '                <td class="uk-text-truncate">';
@@ -47,10 +45,28 @@ function init_table() {
     var s5 = '_0"> 拒绝</label></td>\n' +
         '            </tr>\n' +
         '   ';
-    for (var i = 0; i < stub.length; i++) {
-        var s = s1 + stub[i]['name'] + s2 + stub[i]['teacher']['name'] + s3 + stub[i]['name'] + s4 + stub[i]['name'] + s5;
-        $('#course_table').append(s);
-    }
+
+
+    $.ajax({
+        type: "GET",
+        url: "/courseBase/showCheck",
+        dataType: "json",
+
+        success: function (data) {
+            if (data.success) {
+                var stub = data.data;
+                for (var i = 0; i < stub.length; i++) {
+                    var s = s1 + stub[i]['name'] + s2 + stub[i]['teacherName'] + s3 + stub[i]['name'] + s4 + stub[i]['name'] + s5;
+                    $('#course_table').append(s);
+                }
+            } else
+                alert('连接问题请重试');
+        },
+        error: function () {
+            alert("连接问题请重试");
+        }
+    });
+
 
 
 
@@ -58,11 +74,13 @@ function init_table() {
 }
 
 function get_chosen_area () {
+    var chosen_area = new Array();
     var radios = $('.uk-radio');
     for (radio in radios) {
         if (radios[radio].checked) {
-            alert(radios[radio].name);
+            chosen_area.push(radios[radio]['name']);
         }
     }
+    return chosen_area;
 
 }

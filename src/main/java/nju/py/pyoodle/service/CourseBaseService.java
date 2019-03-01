@@ -2,6 +2,7 @@ package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.CourseBase;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.CourseBaseVO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public interface CourseBaseService {
 
     Response<List<CourseBase>> listCourseBasePass();
 
-    Response<List<CourseBase>> listCourseBaseCheck();
+    Response<List<CourseBaseVO>> listCourseBaseCheck();
 
     Response<Boolean> checkCourseBase(List<String> courseBasePassMap);
 }
