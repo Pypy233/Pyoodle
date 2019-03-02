@@ -82,7 +82,6 @@ function get_chosen_area () {
     var radios = $('.uk-radio');
     for (radio in radios) {
         if (radios[radio].checked) {
-            
             chosen_area.push(radios[radio]['name']);
         }
     }

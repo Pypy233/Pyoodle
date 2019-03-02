@@ -2,6 +2,7 @@ package nju.py.pyoodle.controller;
 
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.FileUtil;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -175,6 +176,27 @@ public class FileController {
             FileCopyUtils.copy(inputStream, response.getOutputStream());
         }
         return new ResponseEntity<>(null);
+
+    }
+
+    @RequestMapping(value = "/files/{file_name}", method = RequestMethod.GET)
+    public void getFile(
+            @PathVariable("file_name") String fileName, String courseName, String type,
+            HttpServletResponse response) {
+        try {
+            // get your file as InputStream
+//            courseName = "j2ee";
+//            type = "ppt";
+            String path = UPLOADED_FOLDER + courseName + "/" + type + "/" + fileName;
+            System.out.println(path);
+            InputStream is = new FileInputStream(path);
+            // copy it to response's OutputStream
+            IOUtils.copy(is, response.getOutputStream());
+            response.flushBuffer();
+        } catch (IOException ex) {
+            logger.info("Error writing file to output stream. Filename was '{}'", fileName, ex);
+            throw new RuntimeException("IOError writing file to output stream");
+        }
 
     }
 }
