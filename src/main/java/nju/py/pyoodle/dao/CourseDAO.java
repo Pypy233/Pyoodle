@@ -5,6 +5,7 @@ import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.enumeration.CourseState;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -18,4 +19,6 @@ public interface CourseDAO extends JpaRepository<Course, Integer> {
     List<Course> getCoursesByState(CourseState state);
 
     Course getCourseByNameAndTeacher(String courseName, User teacher);
+
+    Course getCourseByNameAndTeacherAndTime(String courseName, User teacher, LocalDate time);
 }

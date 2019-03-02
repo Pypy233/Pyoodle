@@ -5,7 +5,12 @@ package nju.py.pyoodle.util;
  * @Date: 2019/2/12 下午3:22
  * @Version 1.0
  */
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
+
 import java.io.File;
+import java.net.MalformedURLException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,16 +48,18 @@ public class FileUtil {
         List<String> list = new ArrayList<>();
         if (file.isDirectory()) {
             File[] files = file.listFiles();
-            for (int i = 0; i < files.length; i++) {
-                if (files[i].isDirectory()) {
-                    return listFileName(files[i].getPath());
+            assert files != null;
+            for (File file1 : files) {
+                if ( file1.isDirectory() ) {
+                    return listFileName(file1.getPath());
                 }
-                if (!files[i].getName().startsWith(".")) //兄dei，有隐藏.文件，剔掉
-                    list.add(files[i].getName());
+                if ( !file1.getName().startsWith(".") ) //兄dei，有隐藏.文件，剔掉
+                    list.add(file1.getName());
             }
         }
         return list;
     }
+
 
     public static void main(String[] args) {
        FileUtil.createFolder("数据结构/s/");

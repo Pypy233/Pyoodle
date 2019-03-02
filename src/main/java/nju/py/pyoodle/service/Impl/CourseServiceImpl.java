@@ -107,15 +107,15 @@ public class CourseServiceImpl implements CourseService {
     public Response<Boolean> checkCourse(List<String> coursePassMap) {
         try {
             for (String pair : coursePassMap) {
-                String[] arr = pair.split(",");
+                String[] arr = pair.split("_");
                 String courseName = arr[0];
-                String teacherName = arr[1];
 
-                User user = userDAO.getUserByName(teacherName);
-                Course course = courseDAO.getCourseByNameAndTeacher(courseName, user);
-                if ( arr[2].equals("true") ) {
+                Course course = courseDAO.getCourseByName(courseName);
+                assert course != null;
+                if ( arr[3].equals("1")) {
                     course.setState(CourseState.Success);
                 }else {
+
                     course.setState(CourseState.Fail);
                 }
 

@@ -75,7 +75,7 @@ public class CourseBaseServiceImpl implements CourseBaseService {
     }
 
     @Override
-    public Response<Boolean> checkCourseBase( List<String> courseBasePassMap) {
+    public Response<Boolean> checkCourseBase(List<String> courseBasePassMap) {
         try {
             for (String pair : courseBasePassMap) {
                 String[] arr = pair.split("_");

@@ -26,8 +26,7 @@ public class CourseBaseServiceImplTest {
 
     @Test
     public void listCourseBaseCheck() {
-        List<CourseBase> courseBases = courseBaseService.listCourseBaseCheck().getData();
-        System.out.println(courseBases.size());
+
 
     }
 }
