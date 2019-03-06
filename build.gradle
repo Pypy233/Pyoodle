@@ -33,5 +33,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	// https://mvnrepository.com/artifact/org.webjars/jquery
 	compile group: 'org.webjars', name: 'jquery', version: '3.3.1-1'
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	compile group: 'commons-io', name: 'commons-io', version: '2.6'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

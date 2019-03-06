@@ -3,6 +3,7 @@ package nju.py.pyoodle.vo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import nju.py.pyoodle.domain.Course;
+import nju.py.pyoodle.util.FileUtil;
 
 /**
  * @Author: py
@@ -19,10 +20,13 @@ public class CourseVO {
 
     private String time;
 
+    private String picPath;
+
     public CourseVO(Course course) {
         this.name = course.getName();
         this.teacherName = course.getTeacher().getName();
         this.time = course.getTime().toString();
+        this.picPath = FileUtil.listPicName(course.getName()).get(0);
     }
 
 }

@@ -184,9 +184,6 @@ public class FileController {
             @PathVariable("file_name") String fileName, String courseName, String type,
             HttpServletResponse response) {
         try {
-            // get your file as InputStream
-//            courseName = "j2ee";
-//            type = "ppt";
             String path = UPLOADED_FOLDER + courseName + "/" + type + "/" + fileName;
             System.out.println(path);
             InputStream is = new FileInputStream(path);

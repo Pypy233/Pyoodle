@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 function list_course_to_be_checked() {
-
+    
     $.ajax({
         type: "POST",
         url: "/courseBase/check",

@@ -1,6 +1,5 @@
 document.write("<script language=javascript src='notification.js'></script>");
 function saveCourseBase() {
-
     $.ajax({
         type: "POST",
         url: "/courseBase/save",

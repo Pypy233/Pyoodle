@@ -5,17 +5,15 @@ package nju.py.pyoodle.util;
  * @Date: 2019/2/12 下午3:22
  * @Version 1.0
  */
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtil {
-    private static String UPLOADED_FOLDER = "/Users/py/J2EEStrorage/";
+    private static final String UPLOADED_FOLDER = "/Users/py/J2EEStrorage/";
+    private static final String LOCAL_PREFIX = "/J2EEStrorage/";
 
     public static void createFolder(String prefix) {
         File file = new File(UPLOADED_FOLDER + prefix);
@@ -27,18 +25,30 @@ public class FileUtil {
 
 
     public static List<String> listPicName(String course) {
-        String picPath = UPLOADED_FOLDER + "/" + course + "/pic";
+        String picPath = UPLOADED_FOLDER + course + "/pic";
         return listFileName(picPath);
     }
 
     public static List<String> listPPTName(String course) {
-        String pptPath = UPLOADED_FOLDER + "/" + course + "/ppt";
+        String pptPath = UPLOADED_FOLDER + course + "/ppt";
         return listFileName(pptPath);
     }
 
     public static List<String> listHwName(String course) {
-        String hwPath = UPLOADED_FOLDER + "/" + course + "/hw";
+        String hwPath = UPLOADED_FOLDER + course + "/hw";
         return listFileName(hwPath);
+    }
+
+
+    public static void copyBase(String courseName, String courseBaseName) {
+        // TODO
+        File desDir = new File(UPLOADED_FOLDER + courseName);
+        File srcDir = new File(UPLOADED_FOLDER + courseBaseName);
+        try {
+            FileUtils.copyDirectory(srcDir, desDir);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
 
@@ -54,15 +64,16 @@ public class FileUtil {
                     return listFileName(file1.getPath());
                 }
                 if ( !file1.getName().startsWith(".") ) //兄dei，有隐藏.文件，剔掉
-                    list.add(file1.getName());
+                    list.add(file1.getAbsolutePath().substring("/Users/py".length() + 1));
             }
         }
         return list;
     }
 
 
+
     public static void main(String[] args) {
-       FileUtil.createFolder("数据结构/s/");
+       System.out.println(listPicName("计基").get(0));
     }
 
 

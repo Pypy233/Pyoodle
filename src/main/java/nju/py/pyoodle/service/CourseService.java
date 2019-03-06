@@ -28,5 +28,7 @@ public interface CourseService {
 
     Response<List<CourseVO>> listToBeCheckedCourse();
 
+    Response<List<CourseVO>> listAll();
+
 
 }

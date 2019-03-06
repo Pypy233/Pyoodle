@@ -4,15 +4,16 @@ import nju.py.pyoodle.dao.CourseBaseDAO;
 import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.Course;
+import nju.py.pyoodle.domain.CourseBase;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseService;
+import nju.py.pyoodle.util.FileUtil;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -111,9 +112,11 @@ public class CourseServiceImpl implements CourseService {
                 String courseName = arr[0];
 
                 Course course = courseDAO.getCourseByName(courseName);
-                assert course != null;
+                CourseBase courseBase = course.getCourseBase();
+                String courseBaseName = courseBase.getName();
                 if ( arr[3].equals("1")) {
                     course.setState(CourseState.Success);
+                    FileUtil.copyBase(courseName, courseBaseName);
                 }else {
 
                     course.setState(CourseState.Fail);
@@ -140,6 +143,21 @@ public class CourseServiceImpl implements CourseService {
             return new Response<>(true, voList);
         } catch (Exception ex) {
             return new Response<>(false, "Fail to list course to be checked...");
+        }
+    }
+
+    @Override
+    public Response<List<CourseVO>> listAll() {
+        try {
+            List<CourseVO> courseVOList = new ArrayList<>();
+            List<Course> courseList = courseDAO.getCoursesByState(CourseState.Success);
+            for (Course course: courseList) {
+                courseVOList.add(new CourseVO(course));
+            }
+            return new Response<>(true, courseVOList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list all course...");
         }
     }
 }

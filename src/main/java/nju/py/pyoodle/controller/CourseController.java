@@ -50,6 +50,12 @@ public class CourseController {
         return courseService.checkCourse(coursePassMap);
     }
 
+    @GetMapping("/course/listAll")
+    @ResponseBody
+    public Response<List<CourseVO>> listAll() {
+        return courseService.listAll();
+    }
+
 
     @GetMapping("/course/listJoin")
     @ResponseBody

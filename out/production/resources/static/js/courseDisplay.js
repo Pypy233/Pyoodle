@@ -19,7 +19,11 @@ function listCourse() {
         '\t\t\t\t\t</div>\n' +
         '\t\t\t\t\t<div class="uk-card-media">\n' +
         '\t\t\t\t\t\t<div class="uk-inline-clip uk-transition-toggle" tabindex="0">\n' +
-        '\t\t\t\t\t\t\t<img class="lazy" data-src="/J2EEStrorage/数据结构/pic/3913AC97B5F290EDFF3A3937D58DF7CB.png" data-width="400" data-height="300" data-uk-img alt="" src="img/transp.gif">\n' +
+        '\t\t\t\t\t\t\t<img class="lazy" data-src=""'; // 路径
+
+    var s3 = 'data-width="400" data-height="300" data-uk-img alt="" onclick = "click_on_course_img(this)" src="';
+    var s5 = '" value="'; // courseName
+    var s4 =    '">\n' +
         '\t\t\t\t\t\t\t<div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">\n' +
         '\t\t\t\t\t\t\t\t<span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345\n' +
         '\t\t\t\t\t\t\t</div>\n' +
@@ -52,20 +56,27 @@ function listCourse() {
 
     $.ajax({
         type: "GET",
-        url: "/courseBase/show",
+        url: "/course/listAll",
         dataType: "json",
         success: function (data) {
             if (data.success) {
                 var stub = data.data;
                 for(var i = 0; i < stub.length; i++) {
-                    s = s1 +  stub[i]['name'] + s2;
+                    s = s1 + stub[i]['picPath'] + s3 + stub[i]['picPath'] + s5 + stub[i]['name'] + s4 + stub[i]['name'] + s2;
                     $("#course_cards").append(s);
                 }
             } else
                 notifyWarning('连接问题请重试');
         },
         error: function () {
-            alert("连接问题请重试");
+            alert("连接问题请重试" );
         }
     });
+}
+
+function click_on_course_img(el) {
+    alert(el.getAttribute('value'));
+    localStorage.setItem('course', el.getAttribute('value'));
+    window.location.href = '/uploadPPT.html';
+
 }
