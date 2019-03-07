@@ -3,6 +3,7 @@ package nju.py.pyoodle.service;
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
+import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,10 @@ public interface CourseService {
     Response<List<CourseVO>> listToBeCheckedCourse();
 
     Response<List<CourseVO>> listAll();
+
+    Response<List<FileItemVO>> listPPT(String courseName);
+
+    Response<List<FileItemVO>> listHw(String courseName);
 
 
 }

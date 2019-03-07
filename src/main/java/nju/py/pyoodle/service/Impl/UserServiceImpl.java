@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User indByConfirmationToken(String confirmationToken) {
+    public User findByConfirmationToken(String confirmationToken) {
         return userDAO.getUserByConfirmationToken(confirmationToken);
     }
 

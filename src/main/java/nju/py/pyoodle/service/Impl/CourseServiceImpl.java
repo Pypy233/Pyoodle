@@ -11,6 +11,7 @@ import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.FileUtil;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
+import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -158,6 +159,44 @@ public class CourseServiceImpl implements CourseService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to list all course...");
+        }
+    }
+
+    @Override
+    public Response<List<FileItemVO>> listPPT(String courseName) {
+        try {
+            List<String> pptPathList = FileUtil.listPPTName(courseName);
+            List<FileItemVO> resList = new ArrayList<>();
+            for (String s: pptPathList) {
+                FileItemVO vo = new FileItemVO();
+                vo.setPath(s);
+                String[] pathArr = s.split("/");
+                vo.setName(pathArr[pathArr.length - 1]);
+                resList.add(vo);
+            }
+            return new Response<>(true, resList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list ppt");
+        }
+    }
+
+    @Override
+    public Response<List<FileItemVO>> listHw(String courseName) {
+        try {
+            List<String> hwPathList = FileUtil.listHwName(courseName);
+            List<FileItemVO> resList = new ArrayList<>();
+            for (String s: hwPathList) {
+                FileItemVO vo = new FileItemVO();
+                vo.setPath(s);
+                String[] pathArr = s.split("/");
+                vo.setName(pathArr[pathArr.length - 1]);
+                resList.add(vo);
+            }
+            return new Response<>(true, resList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to homework ppt");
         }
     }
 }

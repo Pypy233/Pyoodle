@@ -75,7 +75,7 @@ function listCourse() {
 }
 
 function click_on_course_img(el) {
-    localStorage.setItem('course', el.getAttribute('value'));
+    localStorage.setItem('courseName', el.getAttribute('value'));
     window.location.href = '/reUpload.html';
     notifySuccess('欢迎进入' + el.getAttribute('value'));
 }

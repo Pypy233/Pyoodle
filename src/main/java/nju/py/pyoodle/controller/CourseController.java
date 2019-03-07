@@ -5,6 +5,7 @@ import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
+import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -67,6 +68,19 @@ public class CourseController {
     @ResponseBody
     public Response<List<CourseVO>> listCourseToBeChecked() {
         return courseService.listToBeCheckedCourse();
+    }
+
+
+    @GetMapping("/course/listPPT")
+    @ResponseBody
+    public Response<List<FileItemVO>> listPPT(String courseName) {
+        return courseService.listPPT(courseName);
+    }
+
+    @GetMapping("/course/listHw")
+    @ResponseBody
+    public Response<List<FileItemVO>> listHw(String courseName) {
+        return courseService.listHw(courseName);
     }
 
 }

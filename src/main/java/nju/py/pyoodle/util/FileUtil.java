@@ -73,7 +73,7 @@ public class FileUtil {
 
 
     public static void main(String[] args) {
-       System.out.println(listPicName("计基").get(0));
+       System.out.println(listPPTName("计基").get(0));
     }
 
 

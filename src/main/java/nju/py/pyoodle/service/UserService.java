@@ -23,7 +23,7 @@ public interface UserService {
 
     User findByEmail(String email);
 
-    User indByConfirmationToken(String confirmationToken);
+    User findByConfirmationToken(String confirmationToken);
 
     boolean updateInfo(String username, String password, String emil, String number);
 

@@ -207,7 +207,7 @@
                         <img src="img/ppt.svg" class="uk-responsive-width" data-uk-svg>
                     </span>
 
-                <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
+                    <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
                 </div>
             </form>
 
@@ -240,28 +240,24 @@
 
     </fieldset>
 </div>
-    <!-- JS FILES -->
+<!-- JS FILES -->
 
-    <script src="/js/notification.js"></script>
-    <script src="/js/chartScripts.js"></script>
-    <script src="/js/saveFile.js"></script>
-    <script src="/js/courseBase.js"></script>
+<script src="/js/notification.js"></script>
+<script src="/js/chartScripts.js"></script>
+<script src="/js/saveFile.js"></script>
+<script src="/js/courseBase.js"></script>
 </body>
 
 <script>
-
     $("#btnSubmit").click(function (event) {
         localStorage.courseName = $('#courseName').val();
-
         //stop submit the form, we will post it manually.
         event.preventDefault();
         //savePPT();
-
         fire_ajax_submit();
         pic_submit();
         hw_submit();
         saveCourseBase();
-
     });
 </script>
 
