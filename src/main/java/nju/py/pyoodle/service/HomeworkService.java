@@ -12,5 +12,5 @@ import java.time.LocalDate;
  */
 @Service
 public interface HomeworkService {
-    Response<Boolean> addHw(String courseName, String hwName, String description, LocalDate ddl);
+    Response<Boolean> addHw(String name, String courseName, int size, String type, String ddl, String description);
 }

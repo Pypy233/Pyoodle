@@ -30,13 +30,15 @@ public class HomeworkServiceImpl implements HomeworkService {
     }
 
     @Override
-    public Response<Boolean> addHw(String courseName, String hwName, String description, LocalDate ddl) {
+    public Response<Boolean> addHw(String name, String courseName, int size, String type, String ddl, String description) {
         try {
             Homework homework = new Homework();
-            homework.setName(hwName);
+            homework.setName(name);
             homework.setBeginDate(DateUtil.getNow());
-            homework.setDdl(ddl);
+            homework.setDdl(DateUtil.parse(ddl));
             homework.setDescription(description);
+            homework.setSize(size);
+            homework.setType(type);
             homeworkDAO.save(homework);
 
             Course course = courseDAO.getCourseByName(courseName);
@@ -49,6 +51,5 @@ public class HomeworkServiceImpl implements HomeworkService {
             ex.printStackTrace();
             return new Response<>(false, "Fail to save homework");
         }
-
     }
 }

@@ -18,6 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 <script src="js/init.js"></script>
 <script src="js/courseBase.js"></script>
 <script src="js/saveFile.js"></script>
@@ -181,35 +183,53 @@
         <div class="uk-grid">
             <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">课程名称</label></div>
             <div class="uk-width-1-2">
-                <input id="courseName" class="uk-input uk-border-pill" type="text">
+                <h3>操作系统</h3>
             </div>
         </div>
+
         <div class="uk-grid">
-            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">上传图片</label></div>
+            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">作业名</label></div>
 
-            <form method="POST" enctype="multipart/form-data" id="picUploadForm">
-                <div class="uk-inline">
-                    <span class="uk-form-icon">
-                        <img src="img/picture.svg" class="uk-responsive-width" data-uk-svg>
-                    </span>
-                    <input type="file" name="files" class="uk-input uk-form-contrast"/><br/><br/>
+            <div>
+                <input class="uk-input uk-form-width-small" type="text" placeholder="作业一" id="title">
+            </div>
+        </div>
+
+
+        <div class="uk-grid">
+            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">文件大小</label></div>
+
+            <div>
+                <input class="uk-input uk-form-width-small" type="text" placeholder="5M" id="limit">
+            </div>
+        </div>
+
+        <div class="uk-grid">
+            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">文件类型</label></div>
+
+
+                <div uk-form-custom="target: > * > span:first-child">
+                    <select id="typebtn">
+                        <option value="">请选择</option>
+                        <option value="zip">ZIP</option>
+                        <option value="doc">WORD</option>
+                        <option value="pdf">PDF</option>
+                        <option value="md">MD</option>
+                    </select>
+                    <button class="uk-button uk-button-default" type="button" tabindex="-1" >
+                        <span ></span>
+                        <span uk-icon="icon: chevron-down"></span>
+                    </button>
                 </div>
-            </form>
-
 
         </div>
+
         <div class="uk-grid">
-            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">上传课件</label></div>
+            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">截止时间</label></div>
+            <div>
+                <input type="text" id="datepicker" class="uk-input uk-form-width-medium">
 
-            <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
-                <div class="uk-inline">
-                    <span class="uk-form-icon">
-                        <img src="img/ppt.svg" class="uk-responsive-width" data-uk-svg>
-                    </span>
-
-                    <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
-                </div>
-            </form>
+            </div>
 
 
         </div>
@@ -227,23 +247,51 @@
                 </div>
             </form>
 
+        </div>
 
+        <div class="uk-grid">
+            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">作业要求</label></div>
 
-
-
+            <div class="uk-margin">
+                <textarea class="uk-textarea" rows="8" cols="50" placeholder="Textarea" id="requirements"></textarea>
+            </div>
             <div class="uk-align-center">
                 <button id="btnSubmit" type="button" class="uk-button uk-button-primary uk-border-pill uk-width-1-1">提交申请</button>
             </div>
-
-
         </div>
+
+
+
 
     </fieldset>
 </div>
 <!-- JS FILES -->
+<script>
+    var picker = new Pikaday({
+        field: document.getElementById('datepicker'),
+        format: 'YYYY-MM-DD',
+        toString(date, format) {
+            // you should do formatting based on the passed format,
+            // but we will just return 'D/M/YYYY' for simplicity
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
 
+            return `${year}-${month}-${day}`;
+        },
+        parse(dateString, format) {
+            // dateString is the result of `toString` method
+            const parts = dateString.split('/');
+            const day = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10) - 1;
+            const year = parseInt(parts[2], 10);
+            return new Date(year, month, day);
+        }
+    });
+</script>
 <script src="/js/chartScripts.js"></script>
 </body>
+
 
 <script>
 

@@ -26,8 +26,8 @@ public class HomeworkController {
 
     @RequestMapping("/save")
     @ResponseBody
-    public Response<Boolean> saveHw(String courseName, String hwName, String description, String ddl) {
-        return homeworkService.addHw(courseName, hwName, description, DateUtil.parse(ddl));
+    public Response<Boolean> addHw(String name, String courseName, int size, String type, String ddl, String description) {
+        return homeworkService.addHw(name, courseName, size, type, ddl, description);
     }
 
 

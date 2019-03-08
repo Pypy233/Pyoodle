@@ -22,13 +22,12 @@ public class Homework {
 
     private String description;
 
+    private int size;
+
     private LocalDate beginDate;
 
     private LocalDate ddl;
 
     private String type;
-
-
-
 
 }

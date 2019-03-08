@@ -76,6 +76,6 @@ function listCourse() {
 
 function click_on_course_img(el) {
     localStorage.setItem('courseName', el.getAttribute('value'));
-    window.location.href = '/reUpload.html';
+    window.location.href = '/reUpload_teacher.html';
     notifySuccess('欢迎进入' + el.getAttribute('value'));
 }
