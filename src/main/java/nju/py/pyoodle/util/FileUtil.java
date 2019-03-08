@@ -39,9 +39,19 @@ public class FileUtil {
         return listFileName(hwPath);
     }
 
+    public static List<String> listOnceNowHW(String coursePartName) {
+        List<String> courseNameList = listFileName(UPLOADED_FOLDER);
+        List<String> all = new ArrayList<>();
+        for(String c: courseNameList) {
+            if (c.contains(coursePartName) || c.equals(coursePartName) ) {
+                all.add(c);
+            }
+        }
+        return all;
+    }
+
 
     public static void copyBase(String courseName, String courseBaseName) {
-        // TODO
         File desDir = new File(UPLOADED_FOLDER + courseName);
         File srcDir = new File(UPLOADED_FOLDER + courseBaseName);
         try {
@@ -73,7 +83,9 @@ public class FileUtil {
 
 
     public static void main(String[] args) {
-       System.out.println(listPPTName("计基").get(0));
+        for (String s: listOnceNowHW("j")) {
+            System.out.println(s);
+        }
     }
 
 

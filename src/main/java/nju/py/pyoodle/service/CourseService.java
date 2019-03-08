@@ -5,6 +5,7 @@ import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
+import nju.py.pyoodle.vo.JoinedCourseVO;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -19,9 +20,9 @@ import java.util.List;
 public interface CourseService {
     Response<Boolean> saveCourse(String username, LocalDate time, int classNum, int limit, String courseBaseName);
 
-    Response<List<Course>> listPassedCourse();
+    Response<List<CourseVO>> listPassedCourse();
 
-    Response<Boolean> joinCourse(String courseName, String userName);
+    Response<Boolean> joinCourse(List<String> courseNameList);
 
     Response<List<JoinableCourse>> listJoinableCourse(String userName);
 
@@ -34,6 +35,10 @@ public interface CourseService {
     Response<List<FileItemVO>> listPPT(String courseName);
 
     Response<List<FileItemVO>> listHw(String courseName);
+
+    Response<Boolean> dropCourse(List<String> idCourseList);
+
+    Response<List<JoinedCourseVO>> listJoinedCourse(String userName);
 
 
 }

@@ -3,33 +3,33 @@ $(document).ready(function () {
     init_table();
 
     $("#btnSubmit").click(function (event) {
-        join_course();
+        drop_course();
 
     });
 
 
 });
 
-function join_course() {
+function drop_course() {
     var chk = $("input[name = 'box']");
     var chosenK = []
     chosenK.push(localStorage.username);
     for (k in chk) {
         if (chk[k].checked) {
             chosenK.push(chk[k].value);
-          //  alert(chosenK);
+            //  alert(chosenK);
         }
     }
 
     $.ajax({
         type: "POST",
-        url: "/course/join",
+        url: "/course/drop",
         data: 'courseNameList=' + chosenK,
         dataType: "json",
 
         success: function (data) {
             if (data.success) {
-                notifySuccess('选课成功');
+                notifySuccess('成功退课')
             } else
                 alert('连接问题请重试');
         },
@@ -40,7 +40,7 @@ function join_course() {
 }
 
 function init_table() {
-    var stub = [{'name': '操作系统', 'time': '2019-03-03', 'limit': 230, 'current': 100, 't': 'whr'}, {'name': '数据结构', 'time': '2019-03-03', 'limit': 230, 'current': 100, 't': 'fx'}]
+   // var stub = [{'name': '操作系统', 'time': '2019-03-03', 'limit': 230, 'current': 100, 't': 'whr'}, {'name': '数据结构', 'time': '2019-03-03', 'limit': 230, 'current': 100, 't': 'fx'}]
     var s1 = ' <tbody>\n' +
         '            <tr>\n' +
         '                <td><input class="uk-checkbox" type="checkbox" name="box", value="';
@@ -50,8 +50,8 @@ function init_table() {
         '                <td>';
     var s4 = '</td>\n' +
         '                <td class="uk-text-truncate">';
-        // '                    <a class="uk-link-reset" href=""></a>' +
-        // '';
+    // '                    <a class="uk-link-reset" href=""></a>' +
+    // '';
     var s5 = '</td>\n' +
         '                <td class="uk-text-truncate">';
     var s6 = '</td>\n' +
@@ -59,13 +59,9 @@ function init_table() {
     var s7 = '            </td>\n</tr>\n' +
         '\n' +
         '            </tbody>';
-    // for (var i = 0; i < stub.length; i++) {
-    //     var s = s1 + stub[i]['name'] + s2 + s3 + stub[i]['time'] + s4 + stub[i]['name'] + s5 + stub[i]['t'] + s6 + stub[i]['limit'] + s5 + stub[i]['current'] + s7;
-    //     $('#course_table').append(s);
-    // }
     $.ajax({
         type: "GET",
-        url: "/course/listJoin",
+        url: "/course/listJoined",
         dataType: "json",
         data: {userName: localStorage.username},
 

@@ -13,6 +13,7 @@ import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
+import nju.py.pyoodle.vo.JoinedCourseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -58,9 +59,14 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Response<List<Course>> listPassedCourse() {
+    public Response<List<CourseVO>> listPassedCourse() {
         try {
-            return new Response<>(true, courseDAO.getCoursesByState(CourseState.Success));
+            List<CourseVO> courseList = new ArrayList<>();
+            for (Course c: courseDAO.getCoursesByState(CourseState.Success)) {
+                courseList.add(new CourseVO(c));
+            }
+            return new Response<>(true, courseList);
+
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to list passed course...");
@@ -68,15 +74,20 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Response<Boolean> joinCourse(String courseName, String userName) {
+    public Response<Boolean> joinCourse(List<String> courseNameList) {
         try {
-            Course course = courseDAO.getCourseByName(courseName);
-            List<User> studentList = course.getStudents();
+            String userName = courseNameList.get(0);
+            for (int i = 1; i < courseNameList.size(); i++) {
+                Course course = courseDAO.getCourseByName(courseNameList.get(i));
+                List<User> studentList = course.getStudents();
 
-            User user = userDAO.getUserByName(userName);
-            studentList.add(user);
-            course.setStudents(studentList);
-            courseDAO.save(course);
+                User user = userDAO.getUserByName(userName);
+                if (!studentList.contains(user)) {
+                    studentList.add(user);
+                    course.setStudents(studentList);
+                    courseDAO.save(course);
+                }
+            }
             return new Response<>(true, "Succeed to join course...");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -197,6 +208,46 @@ public class CourseServiceImpl implements CourseService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to homework ppt");
+        }
+    }
+
+    @Override
+    public Response<Boolean> dropCourse(List<String> idCourseList) {
+        try {
+            String userName = idCourseList.get(0);
+            for (int i = 1; i < idCourseList.size(); i++) {
+                Course course = courseDAO.getCourseByName(idCourseList.get(i));
+                List<User> studentList = course.getStudents();
+
+                User user = userDAO.getUserByName(userName);
+                if (studentList.contains(user)) {
+                    studentList.remove(user);
+                    course.setStudents(studentList);
+                    courseDAO.save(course);
+                }
+            }
+            return new Response<>(true, "Succeed to drop course...");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to drop course...");
+        }
+    }
+
+    @Override
+    public Response<List<JoinedCourseVO>> listJoinedCourse(String userName) {
+        try {
+            List<JoinedCourseVO> voList = new ArrayList<>();
+            List<Course> courseList = courseDAO.findAll();
+            User user = userDAO.getUserByName(userName);
+            for (Course course : courseList) {
+                if ( course.getStudents().contains(user) ) {
+                    voList.add(new JoinedCourseVO(course));
+                }
+            }
+            return new Response<>(true, voList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list joined course...");
         }
     }
 }

@@ -1,6 +1,7 @@
 package nju.py.pyoodle.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import nju.py.pyoodle.enumeration.UserType;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Entity(name = "user")
 @Data
+@NoArgsConstructor
 public class User {
 
     @Id

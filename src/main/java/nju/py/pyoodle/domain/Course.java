@@ -1,6 +1,9 @@
 package nju.py.pyoodle.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import nju.py.pyoodle.enumeration.CourseState;
 
 import javax.persistence.*;
@@ -14,6 +17,8 @@ import java.util.List;
  */
 @Entity(name = "course")
 @Data
+@NoArgsConstructor
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +27,7 @@ public class Course {
     private String name;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     private CourseBase courseBase;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

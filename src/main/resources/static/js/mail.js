@@ -36,7 +36,6 @@ function mailAll() {
 }
 
 function listCourse() {
-
     $.ajax({
         type: "GET",
         url: "/course/passed",

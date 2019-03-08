@@ -7,6 +7,7 @@ import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.JoinableCourse;
+import nju.py.pyoodle.vo.JoinedCourseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,14 +35,14 @@ public class CourseController {
 
     @GetMapping("/course/passed")
     @ResponseBody
-    public Response<List<Course>> listCourse() {
+    public Response<List<CourseVO>> listCourse() {
         return courseService.listPassedCourse();
     }
 
     @PostMapping("/course/join")
     @ResponseBody
-    public Response<Boolean> joinCourse(String courseName, String userName) {
-        return courseService.joinCourse(courseName, userName);
+    public Response<Boolean> joinCourse(@RequestParam("courseNameList") List<String> courseName) {
+        return courseService.joinCourse(courseName);
     }
 
     // Given a String[] with courseName,username,passed(true or false)
@@ -81,6 +82,18 @@ public class CourseController {
     @ResponseBody
     public Response<List<FileItemVO>> listHw(String courseName) {
         return courseService.listHw(courseName);
+    }
+
+    @GetMapping("/course/listJoined")
+    @ResponseBody
+    public Response<List<JoinedCourseVO>> listJoinedCourse(String userName) {
+        return courseService.listJoinedCourse(userName);
+    }
+
+    @PostMapping("/course/drop")
+    @ResponseBody
+    public Response<Boolean> dropCourse(@RequestParam("courseNameList") List<String> idCourseList) {
+        return courseService.dropCourse(idCourseList);
     }
 
 }

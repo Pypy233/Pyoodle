@@ -13,12 +13,30 @@ $(document).ready(function () {
 function join_course() {
     var chk = $("input[name = 'box']");
     var chosenK = []
+    chosenK.push(localStorage.username);
     for (k in chk) {
         if (chk[k].checked) {
             chosenK.push(chk[k].value);
-            alert(chosenK);
+          //  alert(chosenK);
         }
     }
+
+    $.ajax({
+        type: "POST",
+        url: "/course/join",
+        data: 'courseNameList=' + chosenK,
+        dataType: "json",
+
+        success: function (data) {
+            if (data.success) {
+                notifySuccess('选课成功');
+            } else
+                alert('连接问题请重试');
+        },
+        error: function () {
+            alert("连接问题请重试");
+        }
+    });
 }
 
 function init_table() {
