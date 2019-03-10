@@ -40,5 +40,7 @@ public interface CourseService {
 
     Response<List<JoinedCourseVO>> listJoinedCourse(String userName);
 
+    Response<List<String>> listCourseByTeacher(String userName);
+
 
 }

@@ -17,7 +17,6 @@ function join_course() {
     for (k in chk) {
         if (chk[k].checked) {
             chosenK.push(chk[k].value);
-          //  alert(chosenK);
         }
     }
 
@@ -59,10 +58,6 @@ function init_table() {
     var s7 = '            </td>\n</tr>\n' +
         '\n' +
         '            </tbody>';
-    // for (var i = 0; i < stub.length; i++) {
-    //     var s = s1 + stub[i]['name'] + s2 + s3 + stub[i]['time'] + s4 + stub[i]['name'] + s5 + stub[i]['t'] + s6 + stub[i]['limit'] + s5 + stub[i]['current'] + s7;
-    //     $('#course_table').append(s);
-    // }
     $.ajax({
         type: "GET",
         url: "/course/listJoin",

@@ -96,4 +96,10 @@ public class CourseController {
         return courseService.dropCourse(idCourseList);
     }
 
+    @GetMapping("/course/listByTeacher")
+    @ResponseBody
+    public Response<List<String>> listCourseByTeacher(String userName) {
+        return courseService.listCourseByTeacher(userName);
+    }
+
 }

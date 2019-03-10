@@ -1,6 +1,10 @@
 document.write("<script language=javascript src='notification.js'></script>");
 $(document).ready(function () {
     $('h3').html(localStorage.courseName);
+    $('#btnSubmit').unbind('click').click(function (event) {
+        createHw();
+
+    });
 
 });
 
@@ -14,7 +18,7 @@ function createHw() {
 
     $.ajax({
         type: "POST",
-        url: "/hw/create",
+        url: "/hw/save",
         data: {
                 name: title,
                 courseName: courseName,
@@ -26,7 +30,7 @@ function createHw() {
 
         success: function (data) {
             if (data.success) {
-                notifySuccess('成功审批开课信息');
+                notifySuccess('成功创建作业');
             } else
                 alert('连接问题请重试');
         },

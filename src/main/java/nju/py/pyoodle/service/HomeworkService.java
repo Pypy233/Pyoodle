@@ -13,4 +13,6 @@ import java.time.LocalDate;
 @Service
 public interface HomeworkService {
     Response<Boolean> addHw(String name, String courseName, int size, String type, String ddl, String description);
+
+    Response<Boolean> downloadHws(String courseName, String hwName);
 }

@@ -20,7 +20,7 @@ function listCourse() {
             if (data.success) {
                 var stub = data.data;
                 for(var i = 0; i < stub.length; i++) {
-                    s = '<option value="' + stub[i]['name'] + '">' + stub[i]['name'] + '</option>';
+                    var s = '<option value="' + stub[i]['name'] + '">' + stub[i]['name'] + '</option>';
                     $("#coursebtn").append(s);
                 }
             } else

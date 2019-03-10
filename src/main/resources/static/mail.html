@@ -20,7 +20,6 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/init.js"></script>
 <script src="/js/notification.js"></script>
-<script src="/js/course.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 <!--HEADER-->
@@ -165,7 +164,6 @@
     </div>
 </aside>
 <div id="content" data-uk-height-viewport="expand: true" class="uk-flex uk-flex-center">
-    <script src="js/courseBase.js"></script>
 
     <fieldset class="uk-fieldset">
         <div>
@@ -177,7 +175,7 @@
 
 
             <!--</div>-->
-            <form><div class="uk-margin">
+            <div class="uk-margin">
                 <div uk-form-custom="target: > * > span:first-child">
                     <select id="coursebtn">
                         <option value="">请选择</option>
@@ -188,7 +186,9 @@
                         <span uk-icon="icon: chevron-down"></span>
                     </button>
                 </div>
-            </div></form>
+            </div>
+
+
 
         </div>
 
@@ -226,6 +226,7 @@
 <!-- JS FILES -->
 
 <script src="/js/chartScripts.js"></script>
+<script src="/js/notification.js"></script>
 <script src="/js/init.js"></script>
 <script src="/js/notification.js"></script>
 <script src="/js/mail.js"></script>

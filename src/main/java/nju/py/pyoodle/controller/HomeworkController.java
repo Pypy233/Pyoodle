@@ -4,9 +4,7 @@ import nju.py.pyoodle.service.HomeworkService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: py
@@ -24,11 +22,16 @@ public class HomeworkController {
     }
 
 
-    @RequestMapping("/save")
+    @PostMapping("/save")
     @ResponseBody
     public Response<Boolean> addHw(String name, String courseName, int size, String type, String ddl, String description) {
         return homeworkService.addHw(name, courseName, size, type, ddl, description);
     }
 
+    @GetMapping("/downloadAll")
+    @ResponseBody
+    public Response<Boolean> downloadHws(String courseName, String hwName) {
+        return homeworkService.downloadHws(courseName, hwName);
+    }
 
 }

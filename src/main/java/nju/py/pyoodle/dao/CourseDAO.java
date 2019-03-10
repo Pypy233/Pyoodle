@@ -20,5 +20,7 @@ public interface CourseDAO extends JpaRepository<Course, Integer> {
 
     Course getCourseByNameAndTeacher(String courseName, User teacher);
 
+    List<Course> getCoursesByTeacher(User user);
+
     Course getCourseByNameAndTeacherAndTime(String courseName, User teacher, LocalDate time);
 }

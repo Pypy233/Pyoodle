@@ -250,4 +250,21 @@ public class CourseServiceImpl implements CourseService {
             return new Response<>(false, "Fail to list joined course...");
         }
     }
+
+    @Override
+    public Response<List<String>> listCourseByTeacher(String userName) {
+        try {
+            User user = userDAO.getUserByName(userName);
+            List<Course> courseList = courseDAO.getCoursesByTeacher(user);
+            List<String> stringList = new ArrayList<>();
+            for(Course course: courseList) {
+                stringList.add(course.getName());
+            }
+            System.out.println(stringList.size());
+            return new Response<>(true, stringList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list course by teacher");
+        }
+    }
 }

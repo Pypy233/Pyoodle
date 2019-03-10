@@ -4,6 +4,7 @@ import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.HomeworkDAO;
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.Homework;
+import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.HomeworkService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
@@ -50,6 +51,20 @@ public class HomeworkServiceImpl implements HomeworkService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to save homework");
+        }
+    }
+
+    @Override
+    public Response<Boolean> downloadHws(String courseName, String hwName) {
+        try {
+            Course course = courseDAO.getCourseByName(courseName);
+            List<User> studentList = course.getStudents();
+
+            //TODO
+            return new Response<>(true, "Succeed to download all hws");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to download all hws...");
         }
     }
 }

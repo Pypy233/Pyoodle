@@ -54,9 +54,11 @@ public class UserController {
 
     }
 
-
-
-
+    @PostMapping("/update")
+    @ResponseBody
+    public Response<Boolean> updateUser(String ordinaryUserName, String newUserName, String password, String email, String studentNumber) {
+        return userService.updateUser(ordinaryUserName, newUserName, password, email, studentNumber);
+    }
 
 
 }

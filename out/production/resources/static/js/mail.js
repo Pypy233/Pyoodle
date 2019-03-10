@@ -18,7 +18,7 @@ function mailAll() {
         url: "/mail/all",
         dataType: "json",
         data: {
-            courseName: cla,
+            courseName: $("#coursebtn").val(),
             title: title,
             content: text
         },
@@ -38,13 +38,15 @@ function mailAll() {
 function listCourse() {
     $.ajax({
         type: "GET",
-        url: "/course/passed",
-        dataType: "json",
+        url: "/course/listByTeacher",
+        data: {userName: localStorage.username},
         success: function (data) {
             if (data.success) {
+
                 var stub = data.data;
+                var optSet = new Set();
                 for(var i = 0; i < stub.length; i++) {
-                    s = '<option value="1">' + stub[i]['name'] + '</option>';
+                    var s = '<option value="' + stub[i] + '">' + stub[i]+ '</option>';
                     $("#coursebtn").append(s);
                 }
             } else
@@ -54,4 +56,6 @@ function listCourse() {
             alert("连接问题请重试");
         }
     });
+
+
 }

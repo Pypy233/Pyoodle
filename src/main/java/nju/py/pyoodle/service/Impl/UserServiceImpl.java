@@ -77,4 +77,25 @@ public class UserServiceImpl implements UserService {
 
         return false;
     }
+
+    @Override
+    public Response<Boolean> updateUser(String ordinaryUserName, String newUserName, String password, String email, String studentNumber) {
+        try {
+            User user = userDAO.getUserByName(ordinaryUserName);
+            if (!(newUserName == null || newUserName.equals("")) ) {
+                user.setName(newUserName);
+            }
+            user.setStudentNumber(studentNumber);
+            user.setPassword(password);
+            user.setEmail(email);
+            userDAO.save(user);
+            return new Response<>(true, "Succeed to update user info...");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to update user info...");
+        }
+    }
+
+
 }
