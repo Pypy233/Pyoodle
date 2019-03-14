@@ -1,7 +1,12 @@
 package nju.py.pyoodle.controller;
 
+import nju.py.pyoodle.dao.CourseDAO;
+import nju.py.pyoodle.dao.UserDAO;
+import nju.py.pyoodle.domain.Course;
+import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.FileUtil;
+import java.io.*;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,9 +37,13 @@ import java.util.stream.Collectors;
  */
 @RestController
 public class FileController {
+
+
     private final static String DOWNLOAD_PATH = "/Users/py/Downloads/";
+    private final static String HW_PATH = "/Users/py/Downloads/hw_site/";
 
-
+    private final CourseDAO courseDAO;
+    private final UserDAO userDAO;
     private final CourseBaseService courseBaseService;
 
     private final Logger logger = LoggerFactory.getLogger(FileController.class);
@@ -43,8 +52,10 @@ public class FileController {
     private static String UPLOADED_FOLDER = "/Users/py/J2EEStrorage/";
 
     @Autowired
-    public FileController(CourseBaseService courseBaseService) {
+    public FileController(CourseBaseService courseBaseService, CourseDAO courseDAO, UserDAO userDAO) {
         this.courseBaseService = courseBaseService;
+        this.courseDAO = courseDAO;
+        this.userDAO = userDAO;
     }
 
 
@@ -158,10 +169,8 @@ public class FileController {
         File file = new File(DOWNLOAD_PATH + fileName);
         if ( file.exists() ) {
 
-            //get the mimetype
             String mimeType = URLConnection.guessContentTypeFromName(file.getName());
             if ( mimeType == null ) {
-                //unknown mimetype so set the mimetype to application/octet-stream
                 mimeType = "application/octet-stream";
             }
 
@@ -196,4 +205,22 @@ public class FileController {
         }
 
     }
+
+    @GetMapping("/downloadAll")
+    @ResponseBody
+    public void downloadAllHws(String courseName, String hwName, HttpServletResponse response) {
+        String prefixPath = "/Users/py/Downloads/j2ee作业/" + courseName + "/" + hwName + "/";
+        FileUtil.createHwFolder(prefixPath);
+
+        Course course = courseDAO.getCourseByName(courseName);
+        List<User> studentList = course.getStudents();
+        for(User user: studentList) {
+            String studentNumber = user.getStudentNumber();
+            String eachFolder = prefixPath + studentNumber + "/";
+            FileUtil.createHwFolder(eachFolder);
+            // TODO
+
+        }
+    }
+
 }

@@ -49,8 +49,6 @@ function init_table() {
         '                <td>';
     var s4 = '</td>\n' +
         '                <td class="uk-text-truncate">';
-        // '                    <a class="uk-link-reset" href=""></a>' +
-        // '';
     var s5 = '</td>\n' +
         '                <td class="uk-text-truncate">';
     var s6 = '</td>\n' +
@@ -84,7 +82,6 @@ function init_table() {
         var year = da.getFullYear();
         var month = da.getMonth() + 1;
         var date = da.getDate();
-        //console.log([year, month, date].join(‘/‘));
         return [year, month, date].join('-');
     }
 

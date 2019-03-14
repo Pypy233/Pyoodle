@@ -2,61 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407697aa-af4a-4249-ad6a-9d8be2f697fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/dao/CommentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/dao/TopicDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course_display_ppt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_info_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/displayHw.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/displayHw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/courseDrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/courseDrop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_base_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_display.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/course_select.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/course_select.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/createHw.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/createHw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_student.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/dashboard_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/slide1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/img/slide2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseDisplay.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/createHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/createHw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/mail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/mail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/saveFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/saveFile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/HomeworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/HomeworkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/dao/CourseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/domain/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/domain/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/HomeworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/HomeworkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/Impl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/Impl/HomeworkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/service/Impl/HomeworkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/updateUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/updateUserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/util/FileUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseDrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/courseDrop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_base_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_base_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_display_hw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_select.html" beforeDir="false" afterPath="$PROJECT_DIR$/course_select.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createHw.html" beforeDir="false" afterPath="$PROJECT_DIR$/createHw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_student.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slide1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slide2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/courseDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courseDisplayHw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/courseDisplayHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courseDisplayHw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/courseSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courseSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/createHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/createHw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/saveFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/saveFile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/updateUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/updateUserInfo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/course.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="880">
               <caret line="40" column="49" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="49" />
             </state>
           </provider>
@@ -81,58 +38,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="7" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="6" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="228" column="43" selection-start-line="228" selection-start-column="43" selection-end-line="228" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/saveFile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_display_hw.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_info_update.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="245" selection-start-line="245" selection-end-line="245" />
+            <state>
+              <caret column="14" selection-start-column="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/updateUserInfo.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/displayHw.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createHw.html">
+        <entry file="file://$PROJECT_DIR$/js/displayHw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="307" column="7" lean-forward="true" selection-end-line="307" selection-end-column="7" />
+            <state relative-caret-position="132">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/courseDetailDisplay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -142,8 +76,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -176,6 +110,7 @@
       <find>作业</find>
       <find>courseD</find>
       <find>大小</find>
+      <find>disp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,20 +151,22 @@
         <option value="$PROJECT_DIR$/reUpload_teacher.html" />
         <option value="$PROJECT_DIR$/course_base.html" />
         <option value="$PROJECT_DIR$/course_select.html" />
-        <option value="$PROJECT_DIR$/js/courseSelect.js" />
         <option value="$PROJECT_DIR$/js/course.js" />
         <option value="$PROJECT_DIR$/course_create.html" />
         <option value="$PROJECT_DIR$/js/mail.js" />
         <option value="$PROJECT_DIR$/mail.html" />
         <option value="$PROJECT_DIR$/dashboard_teacher.html" />
         <option value="$PROJECT_DIR$/course_display_ppt.html" />
-        <option value="$PROJECT_DIR$/js/courseDisplayHw.js" />
         <option value="$PROJECT_DIR$/createHw.html" />
         <option value="$PROJECT_DIR$/js/createHw.js" />
         <option value="$PROJECT_DIR$/js/saveFile.js" />
         <option value="$PROJECT_DIR$/hw_display.html" />
         <option value="$PROJECT_DIR$/user_info_update.html" />
+        <option value="$PROJECT_DIR$/js/courseSelect.js" />
         <option value="$PROJECT_DIR$/js/updateUserInfo.js" />
+        <option value="$PROJECT_DIR$/js/courseDisplayHw.js" />
+        <option value="$PROJECT_DIR$/js/displayHw.js" />
+        <option value="$PROJECT_DIR$/displayHw.html" />
       </list>
     </option>
   </component>
@@ -303,40 +240,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.user_info_update.html">
+  <component name="RunManager" selected="JavaScript Debug.displayHw.html">
     <configuration name="course_base.html" type="JavascriptDebugType" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/static/course_base.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="course_display_hw.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/static/course_display_hw.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="createHw.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63343/static/createHw.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="dashboard_teacher.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/static/dashboard_teacher.html" useBuiltInWebServerPort="true">
+    <configuration name="displayHw.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63343/static/displayHw.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="mail.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/static/mail.html" useBuiltInWebServerPort="true">
+    <configuration name="courseDetailDisplay.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/courseDetailDisplay.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="user_info_update.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/static/user_info_update.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="mail.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/mail.js" working-dir="$PROJECT_DIR$">
+    <configuration name="updateUserInfo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/updateUserInfo.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.course_base.html" />
       <item itemvalue="JavaScript Debug.createHw.html" />
-      <item itemvalue="JavaScript Debug.dashboard_teacher.html" />
-      <item itemvalue="JavaScript Debug.mail.html" />
-      <item itemvalue="Node.js.mail.js" />
-      <item itemvalue="JavaScript Debug.user_info_update.html" />
+      <item itemvalue="JavaScript Debug.course_display_hw.html" />
+      <item itemvalue="JavaScript Debug.displayHw.html" />
+      <item itemvalue="Node.js.updateUserInfo.js" />
+      <item itemvalue="Node.js.courseDetailDisplay.js" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.user_info_update.html" />
+        <item itemvalue="JavaScript Debug.displayHw.html" />
+        <item itemvalue="Node.js.courseDetailDisplay.js" />
+        <item itemvalue="JavaScript Debug.course_display_hw.html" />
         <item itemvalue="JavaScript Debug.createHw.html" />
-        <item itemvalue="JavaScript Debug.dashboard_teacher.html" />
-        <item itemvalue="JavaScript Debug.mail.html" />
-        <item itemvalue="Node.js.mail.js" />
+        <item itemvalue="Node.js.updateUserInfo.js" />
       </list>
     </recent_temporary>
   </component>
@@ -389,22 +326,26 @@
       <workItem from="1552010454344" duration="2393000" />
       <workItem from="1552024216635" duration="5237000" />
       <workItem from="1552054795103" duration="5840000" />
-      <workItem from="1552191955626" duration="1723000" />
+      <workItem from="1552191955626" duration="1902000" />
+      <workItem from="1552267528816" duration="921000" />
+      <workItem from="1552318426708" duration="2231000" />
+      <workItem from="1552404006171" duration="732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142268000" />
+    <option name="totallyTimeSpent" value="146331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.89078015" visible="true" weight="0.24665257" />
-      <window_info id="Structure" order="1" sideWeight="0.10921986" side_tool="true" visible="true" weight="0.24665257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8851064" visible="true" weight="0.30443975" />
+      <window_info id="Structure" order="1" sideWeight="0.114893615" side_tool="true" visible="true" weight="0.30443975" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32765958" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32344633" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3219858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39716312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,12 +363,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/avatar.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/dashboard-logo-white.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -494,13 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/courseDetailDisplay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="50" column="89" selection-start-line="50" selection-start-column="89" selection-end-line="50" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard_student.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -546,16 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_select.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,13 +530,6 @@
     <entry file="file://$PROJECT_DIR$/img/ppt.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/courseSelect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1229">
-          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -630,20 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="345" column="16" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="177" column="10" selection-start-line="177" selection-start-column="10" selection-end-line="177" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -661,20 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/courseDisplayHw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1082">
-          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/createHw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -682,50 +565,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail.html">
+    <entry file="file://$PROJECT_DIR$/hw_display.html" />
+    <entry file="file://$PROJECT_DIR$/js/courseSelect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="228" column="43" selection-start-line="228" selection-start-column="43" selection-end-line="228" selection-end-column="43" />
+        <state relative-caret-position="-125">
+          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/saveFile.js">
+    <entry file="file://$PROJECT_DIR$/js/updateUserInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw_display.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_display_hw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createHw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="307" column="7" lean-forward="true" selection-end-line="307" selection-end-column="7" />
+        <state relative-caret-position="343">
+          <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user_info_update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="1249">
           <caret line="245" selection-start-line="245" selection-end-line="245" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/updateUserInfo.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/js/saveFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createHw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1169">
+          <caret line="259" column="18" lean-forward="true" selection-start-line="259" selection-start-column="18" selection-end-line="259" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="276" column="7" lean-forward="true" selection-end-line="276" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_display_hw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2270">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/courseDisplayHw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="228" column="43" selection-start-line="228" selection-start-column="43" selection-end-line="228" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="49" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/displayHw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/courseDetailDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/displayHw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

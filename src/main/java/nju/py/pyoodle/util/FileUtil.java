@@ -22,6 +22,13 @@ public class FileUtil {
         }
     }
 
+    public static void createHwFolder(String path) {
+        File file = new File(path);
+        if(!file.exists()) {
+            file.mkdirs();
+        }
+    }
+
 
 
     public static List<String> listPicName(String course) {
