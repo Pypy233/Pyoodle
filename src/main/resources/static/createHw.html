@@ -21,8 +21,6 @@
 <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 <script src="js/init.js"></script>
-<script src="js/courseBase.js"></script>
-<script src="js/saveFile.js"></script>
 <script src="js/notification.js"></script>
 <script src="/js/createHw.js"></script>
 <!--HEADER-->
@@ -174,7 +172,6 @@
     </div>
 </aside>
 <div id="content" data-uk-height-viewport="expand: true" class="uk-flex uk-flex-center">
-    <script src="js/courseBase.js"></script>
 
     <fieldset class="uk-fieldset">
         <div>
@@ -289,20 +286,10 @@
         }
     });
 </script>
+<script>
+</script>
 <script src="/js/chartScripts.js"></script>
 </body>
 
-
-<script>
-
-    $("#btnSubmit").click(function (event) {
-
-        //stop submit the form, we will post it manually.
-        hw_submit();
-        notifySuccess('作业上传成功');
-
-
-    });
-</script>
 
 </html>

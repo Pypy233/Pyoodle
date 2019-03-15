@@ -8,6 +8,7 @@ import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.HomeworkService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.HomeworkVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -66,5 +67,21 @@ public class HomeworkServiceImpl implements HomeworkService {
             ex.printStackTrace();
             return new Response<>(false, "Fail to download all hws...");
         }
+    }
+
+    @Override
+    public Response<HomeworkVO> getHwByCourseAndName(String courseName, String hwName) {
+        try {
+            Course course = courseDAO.getCourseByName(courseName);
+            List<Homework> homeworkList = course.getHomeworkList();
+            for (Homework hw : homeworkList) {
+                if ( hw.getName().equals(hwName) || hwName.contains(hw.getName())) {
+                    return new Response<>(true, new HomeworkVO(hw));
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return new Response<>(false, "Fail to get hw...");
     }
 }

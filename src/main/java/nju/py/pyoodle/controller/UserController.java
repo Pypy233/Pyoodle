@@ -60,5 +60,11 @@ public class UserController {
         return userService.updateUser(ordinaryUserName, newUserName, password, email, studentNumber);
     }
 
+    @GetMapping("/num")
+    @ResponseBody
+    public Response<User> getNum(String userName) {
+        return userService.getStudentNum(userName);
+    }
+
 
 }

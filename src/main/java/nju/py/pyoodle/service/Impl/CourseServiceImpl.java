@@ -5,6 +5,7 @@ import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.CourseBase;
+import nju.py.pyoodle.domain.Homework;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseService;
@@ -195,13 +196,12 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Response<List<FileItemVO>> listHw(String courseName) {
         try {
-            List<String> hwPathList = FileUtil.listHwName(courseName);
+            Course course = courseDAO.getCourseByName(courseName);
+            List<Homework> homeworkList = course.getHomeworkList();
             List<FileItemVO> resList = new ArrayList<>();
-            for (String s: hwPathList) {
+            for (Homework h: homeworkList) {
                 FileItemVO vo = new FileItemVO();
-                vo.setPath(s);
-                String[] pathArr = s.split("/");
-                vo.setName(pathArr[pathArr.length - 1]);
+                vo.setName(h.getName());
                 resList.add(vo);
             }
             return new Response<>(true, resList);

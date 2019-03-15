@@ -90,7 +90,7 @@ public class FileUtil {
 
 
     public static void main(String[] args) {
-        for (String s: listOnceNowHW("j")) {
+        for (String s: listHwName("2019-02-27 数据结构")) {
             System.out.println(s);
         }
     }

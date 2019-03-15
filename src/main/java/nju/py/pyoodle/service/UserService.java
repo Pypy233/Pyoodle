@@ -28,4 +28,6 @@ public interface UserService {
     boolean updateInfo(String username, String password, String emil, String number);
 
     Response<Boolean> updateUser(String ordinaryUserName, String newUserName, String password, String email, String studentNumber);
+
+    Response<User> getStudentNum(String userName);
 }

@@ -97,5 +97,15 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public Response<User> getStudentNum(String userName) {
+        try {
+            User user = userDAO.getUserByName(userName);
+            return new Response<>(true, user);
+        } catch (Exception ex) {
+            return new Response<>(false, "");
+        }
+    }
+
 
 }

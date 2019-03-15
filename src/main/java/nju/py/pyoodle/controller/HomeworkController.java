@@ -1,8 +1,10 @@
 package nju.py.pyoodle.controller;
 
+import nju.py.pyoodle.domain.Homework;
 import nju.py.pyoodle.service.HomeworkService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.HomeworkVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +34,12 @@ public class HomeworkController {
     @ResponseBody
     public Response<Boolean> downloadHws(String courseName, String hwName) {
         return homeworkService.downloadHws(courseName, hwName);
+    }
+
+    @GetMapping("/name")
+    @ResponseBody
+    public Response<HomeworkVO> getHwByCourseAndName(String courseName, String hwName) {
+        return homeworkService.getHwByCourseAndName(courseName, hwName);
     }
 
 }

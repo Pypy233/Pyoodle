@@ -91,7 +91,7 @@ public class FileController {
     @PostMapping("/api/upload/multiHW")
     public ResponseEntity<?> uploadFileMultiHW(@RequestParam("courseName") String courseName,
                                                @RequestParam("files") MultipartFile[] uploadfiles) {
-
+        System.out.println("---------Uploading HW");
         String prefix = courseName + "/hw";
         logger.debug("Multiple file upload!");
 
@@ -115,7 +115,7 @@ public class FileController {
 
     }
 
-    @PostMapping("/api/upload/multiHW")
+    @PostMapping("/api/upload/hw")
     public ResponseEntity<?> uploadStudentHws(@RequestParam("courseName") String courseName, @RequestParam("hwName") String hwName,
                                               @RequestParam("studentNum") String studentNum,
                                                @RequestParam("files") MultipartFile[] uploadfiles) {

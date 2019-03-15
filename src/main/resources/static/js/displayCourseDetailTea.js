@@ -10,13 +10,14 @@ function listHw() {
     var rht_list = '</li>';
     var space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     var btn_check = '<button class="uk-button uk-button-primary uk-dropdown-right-center">查看详情</button>';
-    var btn_upload = '<button class="uk-button uk-button-green uk-dropdown-right-center">上传作业</button>';
+   // var btn_upload = '<button class="uk-button uk-button-green uk-dropdown-right-center">上传作业</button>';
     for (var i = 0; i < stub.length; i++) {
-        var s = lft_list + stub[i] + space + space + space + btn_check + btn_upload + rht_list;
+        var s = lft_list + stub[i] +":" +  space + space + space + btn_check + rht_list;
         $('#hw_list').append(s);
     }
     $('.hw_list').click(function () {
         var str = $(this).text();
-        alert(str)
+        var hwName = str.split(":")[0];
+        localStorage.setItem('hwName', hwName);
     });
 }
