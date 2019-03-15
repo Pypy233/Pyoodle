@@ -115,6 +115,32 @@ public class FileController {
 
     }
 
+    @PostMapping("/api/upload/multiHW")
+    public ResponseEntity<?> uploadStudentHws(@RequestParam("courseName") String courseName, @RequestParam("hwName") String hwName,
+                                              @RequestParam("studentNum") String studentNum,
+                                               @RequestParam("files") MultipartFile[] uploadfiles) {
+
+
+        String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+                .filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+
+        if ( StringUtils.isEmpty(uploadedFileName) ) {
+            return new ResponseEntity("please select a file!", HttpStatus.OK);
+        }
+
+        try {
+
+            saveHw(courseName, hwName, studentNum, Arrays.asList(uploadfiles));
+
+        } catch (IOException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity("Successfully uploaded - "
+                + uploadedFileName, HttpStatus.OK);
+
+    }
+
     @PostMapping("/api/upload/pic")
     public ResponseEntity<?> uploadPicture(@RequestParam("courseName") String courseName,
                                            @RequestParam("files") MultipartFile[] uploadfiles) {
@@ -157,6 +183,24 @@ public class FileController {
 
             byte[] bytes = file.getBytes();
             Path path = Paths.get(UPLOADED_FOLDER + prefix + "/" + file.getOriginalFilename());
+            Files.write(path, bytes);
+
+        }
+
+    }
+
+    private void saveHw(String courseName, String hwName, String studentNum, List<MultipartFile> files) throws IOException {
+        String filePath = UPLOADED_FOLDER + "/hwStorage/" + courseName + "/" + hwName + "/" + studentNum + "/";
+        FileUtil.createFolder(filePath);
+
+        for (MultipartFile file : files) {
+
+            if ( file.isEmpty() ) {
+                continue; //next pls
+            }
+
+            byte[] bytes = file.getBytes();
+            Path path = Paths.get(filePath + file.getOriginalFilename());
             Files.write(path, bytes);
 
         }

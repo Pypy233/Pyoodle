@@ -4,6 +4,8 @@ $(document).ready(function () {
 
 });
 
+
+
 function listCourse() {
     var s1 = '<div class="nature-card">\n' +
         '\t\t\t\t<div class="uk-card uk-card-small uk-card-default">\n' +

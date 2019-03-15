@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="407697aa-af4a-4249-ad6a-9d8be2f697fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/displayHw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/displayHw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/updateUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/updateUserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseDisplayHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/courseDisplayHw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../out/production/resources/static/js/displayHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../out/production/resources/static/js/displayHw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/nju/py/pyoodle/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/nju/py/pyoodle/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/courseDisplayHw.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courseDisplayHw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/courseSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courseSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/updateUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/updateUserInfo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/displayHw.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+            <state relative-caret-position="600">
+              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -184,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,18 +323,19 @@
       <workItem from="1552267528816" duration="921000" />
       <workItem from="1552318426708" duration="2231000" />
       <workItem from="1552404006171" duration="732000" />
+      <workItem from="1552566543036" duration="261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146331000" />
+    <option name="totallyTimeSpent" value="146592000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="793" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8851064" visible="true" weight="0.30443975" />
-      <window_info id="Structure" order="1" sideWeight="0.114893615" side_tool="true" visible="true" weight="0.30443975" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8830243" visible="true" weight="0.30443975" />
+      <window_info id="Structure" order="1" sideWeight="0.11697575" side_tool="true" visible="true" weight="0.30443975" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32765958" />
@@ -646,6 +640,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/mail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/displayHw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -660,17 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/displayHw.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+        <state relative-caret-position="600">
+          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
         </state>
       </provider>
     </entry>
