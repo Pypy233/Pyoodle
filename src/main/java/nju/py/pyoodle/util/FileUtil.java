@@ -22,6 +22,13 @@ public class FileUtil {
         }
     }
 
+    public static void createFolderWithoutPrefix(String path) {
+        File file = new File(path);
+        if(!file.exists()) {
+            file.mkdirs();
+        }
+    }
+
     public static void createHwFolder(String path) {
         File file = new File(path);
         if(!file.exists()) {
@@ -88,11 +95,23 @@ public class FileUtil {
     }
 
 
+    public static String getHwPath(String courseName, String hwName, String studentNum) {
+        File file = new File("/Users/py/J2EEStrorage/hwStorage/" + courseName + "/" + hwName + "/" + studentNum);
+        File[] files = file.listFiles();
+        for (File f: files) {
+            String name = f.getName();
+            if ( !name.substring(0, 1).equals(".") ) {
+                return f.getAbsolutePath();
+            }
+        }
+        return "";
+
+    }
+
+
 
     public static void main(String[] args) {
-        for (String s: listHwName("2019-02-27 数据结构")) {
-            System.out.println(s);
-        }
+        System.out.println(getHwPath("2019-02-27 数据结构", "链表", "161250096"));
     }
 
 

@@ -7,6 +7,8 @@ import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.FileUtil;
 import java.io.*;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,26 +120,26 @@ public class FileController {
     @PostMapping("/api/upload/hw")
     public ResponseEntity<?> uploadStudentHws(@RequestParam("courseName") String courseName, @RequestParam("hwName") String hwName,
                                               @RequestParam("studentNum") String studentNum,
-                                               @RequestParam("files") MultipartFile[] uploadfiles) {
+                                              @RequestParam("files") MultipartFile[] uploadfiles) {
+    try {
 
+            String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+                    .filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
 
-        String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
-                .filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+            if ( StringUtils.isEmpty(uploadedFileName) ) {
+                return new ResponseEntity("please select a file!", HttpStatus.OK);
+            }
 
-        if ( StringUtils.isEmpty(uploadedFileName) ) {
-            return new ResponseEntity("please select a file!", HttpStatus.OK);
-        }
+                saveHw(courseName, hwName, studentNum, Arrays.asList(uploadfiles));
+                return new ResponseEntity("Successfully uploaded - "
+                        + uploadedFileName, HttpStatus.OK);
 
-        try {
-
-            saveHw(courseName, hwName, studentNum, Arrays.asList(uploadfiles));
-
-        } catch (IOException e) {
+        } catch (Exception ex) {
+            ex.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        return new ResponseEntity("Successfully uploaded - "
-                + uploadedFileName, HttpStatus.OK);
+
 
     }
 
@@ -189,20 +191,25 @@ public class FileController {
 
     }
 
-    private void saveHw(String courseName, String hwName, String studentNum, List<MultipartFile> files) throws IOException {
-        String filePath = UPLOADED_FOLDER + "/hwStorage/" + courseName + "/" + hwName + "/" + studentNum + "/";
-        FileUtil.createFolder(filePath);
+    private void saveHw(String courseName, String hwName, String studentNum, List<MultipartFile> files) {
+        try {
 
-        for (MultipartFile file : files) {
+            String filePath = UPLOADED_FOLDER + "hwStorage/" + courseName + "/" + hwName + "/" + studentNum + "/";
+            FileUtils.forceDelete(new File(filePath));
+            FileUtil.createFolderWithoutPrefix(filePath);
 
-            if ( file.isEmpty() ) {
-                continue; //next pls
+            for (MultipartFile file : files) {
+
+                if ( file.isEmpty() ) {
+                    continue; //next pls
+                }
+
+                byte[] bytes = file.getBytes();
+                Path path = Paths.get(filePath + file.getOriginalFilename());
+                Files.write(path, bytes);
             }
-
-            byte[] bytes = file.getBytes();
-            Path path = Paths.get(filePath + file.getOriginalFilename());
-            Files.write(path, bytes);
-
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
     }
@@ -265,6 +272,10 @@ public class FileController {
             // TODO
 
         }
+    }
+
+    public static void main(String[] args) {
+        FileUtil.createHwFolder("/Users/py/J2EEStrorage/hwStorage/2019-02-27 数据结构/链表/161250096/");
     }
 
 }

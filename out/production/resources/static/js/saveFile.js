@@ -47,9 +47,6 @@ function hw_submit() {
     var form = $('#hwUploadForm')[0];
 
     var data = new FormData(form);
-
-    // data.append("CustomField", "This is some extra data, testing");
-    // console.log(localStorage.courseName)
      data.append("courseName", localStorage.courseName);
      // console.log(data['courseName']);
 
@@ -67,7 +64,6 @@ function hw_submit() {
         cache: false,
         timeout: 600000,
         success: function (data) {
-
             $("#result").text(data);
             console.log("SUCCESS : ", data);
             $("#btnSubmit").prop("disabled", false);
@@ -75,7 +71,6 @@ function hw_submit() {
 
         },
         error: function (e) {
-
             $("#result").text(e.responseText);
             console.log("ERROR : ", e);
             $("#btnSubmit").prop("disabled", false);
