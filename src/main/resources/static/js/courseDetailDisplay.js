@@ -86,7 +86,8 @@ function listHw() {
                     var str = $(this).text();
                     var hwName = str.split(":")[0];
                     localStorage.setItem('hwName', hwName);
-                    if (localStorage.getItem('teacher') == 1) {
+                    console.log(localStorage.teacher)
+                    if ("1" === localStorage.teacher) {
                         window.location.href = "/hw_detail_tea.html";
                     } else {
                         window.location.href = "/hw_detail_stu.html";
@@ -100,18 +101,5 @@ function listHw() {
         }
     });
 
-    // var lft_list = '<li class="hw_list">';
-    // var rht_list = '</li>';
-    // var space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    // var btn_check = '<button class="uk-button uk-button-primary uk-dropdown-right-center">查看详情</button>';
-    // var btn_upload = '<button class="uk-button uk-button-green uk-dropdown-right-center">上传作业</button>';
-    // for (var i = 0; i < stub.length; i++) {
-    //     var s = lft_list + stub[i] +":" +  space + space + space + btn_check + btn_upload + rht_list;
-    //     $('#hwList').append(s);
-    // }
-    // $('.hw_list').click(function () {
-    //     var str = $(this).text();
-    //     var hwName = str.split(":")[0];
-    //     localStorage.setItem('hwName', hwName);
-    // });
+
 }

@@ -77,6 +77,7 @@ function listCourse() {
 }
 
 function click_on_course_img(el) {
+    localStorage.setItem('teacher', "1");
     localStorage.setItem('courseName', el.getAttribute('value'));
     window.location.href = '/course_detail_tea.html';
     notifySuccess('欢迎进入' + el.getAttribute('value'));
