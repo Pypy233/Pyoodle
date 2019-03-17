@@ -1,5 +1,6 @@
 package nju.py.pyoodle.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import nju.py.pyoodle.enumeration.UserType;
@@ -15,6 +16,7 @@ import java.util.List;
 @Entity(name = "user")
 @Data
 @NoArgsConstructor
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class User {
 
     @Id

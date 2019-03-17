@@ -57,8 +57,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response<Boolean> updateUser(String name, String studentNumber) {
-        return null;
+    public Response<Boolean> updateUser(String ordinaryName, String name, String studentNumber) {
+        try {
+            User user = userDAO.getUserByName(ordinaryName);
+            user.setName(name);
+            user.setStudentNumber(studentNumber);
+            userDAO.save(user);
+            return new Response<>(true, "");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "");
+        }
     }
 
     @Override

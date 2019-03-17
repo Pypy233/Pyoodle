@@ -1,6 +1,7 @@
 package nju.py.pyoodle.service;
 
 import nju.py.pyoodle.domain.Course;
+import nju.py.pyoodle.domain.Score;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.CourseVO;
 import nju.py.pyoodle.vo.FileItemVO;
@@ -41,6 +42,10 @@ public interface CourseService {
     Response<List<JoinedCourseVO>> listJoinedCourse(String userName);
 
     Response<List<String>> listCourseByTeacher(String userName);
+
+    Response<List<JoinedCourseVO>> listCourse(String userName);
+
+
 
 
 }

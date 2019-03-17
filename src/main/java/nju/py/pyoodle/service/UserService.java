@@ -19,7 +19,7 @@ public interface UserService {
 
     Response<UserType> canLogin(String username, String pwd);
 
-    Response<Boolean> updateUser(String name, String studentNumber);
+    Response<Boolean> updateUser(String ordinaryName, String name, String studentNumber);
 
     User findByEmail(String email);
 

@@ -1,12 +1,10 @@
 package nju.py.pyoodle.service.Impl;
 
+import nju.py.pyoodle.dao.BBSDAO;
 import nju.py.pyoodle.dao.CourseBaseDAO;
 import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.UserDAO;
-import nju.py.pyoodle.domain.Course;
-import nju.py.pyoodle.domain.CourseBase;
-import nju.py.pyoodle.domain.Homework;
-import nju.py.pyoodle.domain.User;
+import nju.py.pyoodle.domain.*;
 import nju.py.pyoodle.enumeration.CourseState;
 import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.FileUtil;
@@ -33,11 +31,14 @@ public class CourseServiceImpl implements CourseService {
     private final UserDAO userDAO;
     private final CourseBaseDAO courseBaseDAO;
 
+    private final BBSDAO bbsDAO;
+
     @Autowired
-    public CourseServiceImpl(CourseDAO courseDAO, UserDAO userDAO, CourseBaseDAO courseBaseDAO) {
+    public CourseServiceImpl(CourseDAO courseDAO, UserDAO userDAO, CourseBaseDAO courseBaseDAO, BBSDAO bbsDAO) {
         this.courseDAO = courseDAO;
         this.userDAO = userDAO;
         this.courseBaseDAO = courseBaseDAO;
+        this.bbsDAO = bbsDAO;
     }
 
     @Override
@@ -52,6 +53,10 @@ public class CourseServiceImpl implements CourseService {
             course.setLimit(limit);
             course.setClassNum(classNum);
             courseDAO.save(course);
+            BBS bbs = new BBS();
+            bbs.setCourse(course);
+            bbsDAO.save(bbs);
+
             return new Response<>(true, "Succeed to save course...");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -265,6 +270,22 @@ public class CourseServiceImpl implements CourseService {
         } catch (Exception ex) {
             ex.printStackTrace();
             return new Response<>(false, "Fail to list course by teacher");
+        }
+    }
+
+    @Override
+    public Response<List<JoinedCourseVO>> listCourse(String userName) {
+        try {
+            User user = userDAO.getUserByName(userName);
+            List<Course> courseList = courseDAO.getCoursesByTeacher(user);
+            List<JoinedCourseVO> joinableCourseList = new ArrayList<>();
+            for(Course course: courseList) {
+                joinableCourseList.add(new JoinedCourseVO(course));
+            }
+            return new Response<>(true, joinableCourseList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list joined");
         }
     }
 }

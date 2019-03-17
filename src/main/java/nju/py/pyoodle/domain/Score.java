@@ -1,5 +1,6 @@
 package nju.py.pyoodle.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +27,6 @@ public class Score {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private User student;
+
+    private int val;
 }

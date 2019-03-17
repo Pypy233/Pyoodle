@@ -96,6 +96,12 @@ public class CourseController {
         return courseService.dropCourse(idCourseList);
     }
 
+    @GetMapping("/course/score")
+    @ResponseBody
+    public Response<List<JoinedCourseVO>> listCourse(String userName) {
+        return courseService.listCourse(userName);
+    }
+
     @GetMapping("/course/listByTeacher")
     @ResponseBody
     public Response<List<String>> listCourseByTeacher(String userName) {

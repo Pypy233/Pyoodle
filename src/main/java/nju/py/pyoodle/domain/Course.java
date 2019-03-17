@@ -51,4 +51,5 @@ public class Course {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<User> students;
+
 }

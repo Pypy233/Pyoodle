@@ -54,10 +54,16 @@ public class UserController {
 
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update0")
     @ResponseBody
     public Response<Boolean> updateUser(String ordinaryUserName, String newUserName, String password, String email, String studentNumber) {
         return userService.updateUser(ordinaryUserName, newUserName, password, email, studentNumber);
+    }
+
+    @PostMapping("/update")
+    @ResponseBody
+    public Response<Boolean> updateUser(String ordinaryName, String newUserName, String studentNumber) {
+        return userService.updateUser(ordinaryName, newUserName, studentNumber);
     }
 
     @GetMapping("/user")
@@ -65,6 +71,8 @@ public class UserController {
     public Response<User> getNum(String userName) {
         return userService.getStudentNum(userName);
     }
+
+
 
 
 }
