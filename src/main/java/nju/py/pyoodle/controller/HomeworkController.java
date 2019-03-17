@@ -9,8 +9,11 @@ import nju.py.pyoodle.util.FileUtil;
 import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.HomeworkVO;
+import nju.py.pyoodle.vo.HwComplexVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @Author: py
@@ -64,6 +67,12 @@ public class HomeworkController {
             ex.printStackTrace();
             return new Response<>(false, "Fail to get hw path...");
         }
+    }
+
+    @RequestMapping("/ls")
+    @ResponseBody
+    public Response<List<HwComplexVO>> listHw(String userName) {
+        return homeworkService.listHw(userName);
     }
 
 }

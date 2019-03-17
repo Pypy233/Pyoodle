@@ -2,17 +2,21 @@ package nju.py.pyoodle.service.Impl;
 
 import nju.py.pyoodle.dao.CourseDAO;
 import nju.py.pyoodle.dao.HomeworkDAO;
+import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.Homework;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.HomeworkService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
+import nju.py.pyoodle.vo.FileItemVO;
 import nju.py.pyoodle.vo.HomeworkVO;
+import nju.py.pyoodle.vo.HwComplexVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,10 +29,13 @@ public class HomeworkServiceImpl implements HomeworkService {
     private final CourseDAO courseDAO;
     private final HomeworkDAO homeworkDAO;
 
+    private final UserDAO userDAO;
+
     @Autowired
-    public HomeworkServiceImpl(CourseDAO courseDAO, HomeworkDAO homeworkDAO) {
+    public HomeworkServiceImpl(CourseDAO courseDAO, HomeworkDAO homeworkDAO, UserDAO userDAO) {
         this.courseDAO = courseDAO;
         this.homeworkDAO = homeworkDAO;
+        this.userDAO = userDAO;
     }
 
     @Override
@@ -83,5 +90,28 @@ public class HomeworkServiceImpl implements HomeworkService {
             ex.printStackTrace();
         }
         return new Response<>(false, "Fail to get hw...");
+    }
+
+    @Override
+    public Response<List<HwComplexVO>> listHw(String userName) {
+        try {
+            User user = userDAO.getUserByName(userName);
+            List<Course> courseList = courseDAO.getCoursesByTeacher(user);
+            List<HwComplexVO> voList = new ArrayList<>();
+            for (Course course: courseList) {
+                for (Homework homework: course.getHomeworkList()) {
+                    String courseName = course.getName();
+                    String hwName = homework.getName();
+                    HwComplexVO vo = new HwComplexVO();
+                    vo.setCourseName(courseName);
+                    vo.setHwName(hwName);
+                    voList.add(vo);
+                }
+            }
+            return new Response<>(true, voList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(false, "Fail to list hw...");
+        }
     }
 }

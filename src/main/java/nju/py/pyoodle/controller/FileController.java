@@ -8,6 +8,7 @@ import nju.py.pyoodle.service.CourseBaseService;
 import nju.py.pyoodle.util.FileUtil;
 import java.io.*;
 
+import nju.py.pyoodle.util.ZipUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
@@ -214,44 +215,46 @@ public class FileController {
 
     }
 
-    @RequestMapping(path = "/download", method = RequestMethod.GET)
-    public ResponseEntity<Resource> download(HttpServletRequest request, HttpServletResponse response, String fileName) throws IOException {
+//    @RequestMapping(path = "/download", method = RequestMethod.GET)
+//    public ResponseEntity<Resource> download(HttpServletRequest request, HttpServletResponse response, String courseName, String hwName) throws IOException {
+//
+//        String prefix = "/Users/py/J2EEStrorage/hwStorage/" + courseName + "/" + hwName;
+//
+//        if ( file.exists() ) {
+//
+//            String mimeType = URLConnection.guessContentTypeFromName(file.getName());
+//            if ( mimeType == null ) {
+//                mimeType = "application/octet-stream";
+//            }
+//
+//            response.setContentType(mimeType);
+//
+//            response.setHeader("Content-Disposition", String.format("inline; filename=\"" + file.getName() + "\""));
+//
+//            response.setContentLength((int) file.length());
+//
+//            InputStream inputStream = new BufferedInputStream(new FileInputStream(file));
+//
+//            FileCopyUtils.copy(inputStream, response.getOutputStream());
+//        }
+//        return new ResponseEntity<>(null);
+//
+//    }
 
-        File file = new File(DOWNLOAD_PATH + fileName);
-        if ( file.exists() ) {
-
-            String mimeType = URLConnection.guessContentTypeFromName(file.getName());
-            if ( mimeType == null ) {
-                mimeType = "application/octet-stream";
-            }
-
-            response.setContentType(mimeType);
-
-            response.setHeader("Content-Disposition", String.format("inline; filename=\"" + file.getName() + "\""));
-
-            response.setContentLength((int) file.length());
-
-            InputStream inputStream = new BufferedInputStream(new FileInputStream(file));
-
-            FileCopyUtils.copy(inputStream, response.getOutputStream());
-        }
-        return new ResponseEntity<>(null);
-
-    }
-
-    @RequestMapping(value = "/files/{file_name}", method = RequestMethod.GET)
+    @RequestMapping(value = "/files/{courseName}/{hwName}", method = RequestMethod.GET)
     public void getFile(
-            @PathVariable("file_name") String fileName, String courseName, String type,
+            @PathVariable("courseName") String courseName, @PathVariable("hwName") String hwName,
             HttpServletResponse response) {
         try {
-            String path = UPLOADED_FOLDER + courseName + "/" + type + "/" + fileName;
-            System.out.println(path);
-            InputStream is = new FileInputStream(path);
-            // copy it to response's OutputStream
+            String prefixPath = "/Users/py/J2EEStrorage/hwStorage/" + courseName + "/" + hwName;
+            System.out.println(prefixPath);
+            ZipUtil.zipfile(courseName, hwName);
+            InputStream is = new FileInputStream("/Users/py/1.zip");
             IOUtils.copy(is, response.getOutputStream());
             response.flushBuffer();
         } catch (IOException ex) {
-            logger.info("Error writing file to output stream. Filename was '{}'", fileName, ex);
+            //logger.info("Error writing file to output stream. Filename was '{}'", ex);
+            ex.printStackTrace();
             throw new RuntimeException("IOError writing file to output stream");
         }
 
