@@ -1,11 +1,9 @@
 package nju.py.pyoodle.service.Impl;
 
-import nju.py.pyoodle.dao.BBSDAO;
-import nju.py.pyoodle.dao.CourseBaseDAO;
-import nju.py.pyoodle.dao.CourseDAO;
-import nju.py.pyoodle.dao.UserDAO;
+import nju.py.pyoodle.dao.*;
 import nju.py.pyoodle.domain.*;
 import nju.py.pyoodle.enumeration.CourseState;
+import nju.py.pyoodle.enumeration.UserType;
 import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.FileUtil;
 import nju.py.pyoodle.util.Response;
@@ -33,12 +31,15 @@ public class CourseServiceImpl implements CourseService {
 
     private final BBSDAO bbsDAO;
 
+    private final DroppedCourseDAO droppedCourseDAO;
+
     @Autowired
-    public CourseServiceImpl(CourseDAO courseDAO, UserDAO userDAO, CourseBaseDAO courseBaseDAO, BBSDAO bbsDAO) {
+    public CourseServiceImpl(CourseDAO courseDAO, UserDAO userDAO, CourseBaseDAO courseBaseDAO, BBSDAO bbsDAO, DroppedCourseDAO droppedCourseDAO) {
         this.courseDAO = courseDAO;
         this.userDAO = userDAO;
         this.courseBaseDAO = courseBaseDAO;
         this.bbsDAO = bbsDAO;
+        this.droppedCourseDAO = droppedCourseDAO;
     }
 
     @Override
@@ -160,6 +161,7 @@ public class CourseServiceImpl implements CourseService {
 
             return new Response<>(true, voList);
         } catch (Exception ex) {
+            ex.printStackTrace();
             return new Response<>(false, "Fail to list course to be checked...");
         }
     }
@@ -229,6 +231,10 @@ public class CourseServiceImpl implements CourseService {
                     studentList.remove(user);
                     course.setStudents(studentList);
                     courseDAO.save(course);
+                    DroppedCourse droppedCourse = new DroppedCourse();
+                    droppedCourse.setCourseName(course.getName());
+                    droppedCourse.setUser(user);
+                    droppedCourseDAO.save(droppedCourse);
                 }
             }
             return new Response<>(true, "Succeed to drop course...");
@@ -244,9 +250,16 @@ public class CourseServiceImpl implements CourseService {
             List<JoinedCourseVO> voList = new ArrayList<>();
             List<Course> courseList = courseDAO.findAll();
             User user = userDAO.getUserByName(userName);
-            for (Course course : courseList) {
-                if ( course.getStudents().contains(user) ) {
+            if (user.getType().equals(UserType.TEACHER)) {
+                List<Course> courseList1 = courseDAO.getCoursesByTeacher(user);
+                for(Course course: courseList1) {
                     voList.add(new JoinedCourseVO(course));
+                }
+            } else {
+                for (Course course : courseList) {
+                    if ( course.getStudents().contains(user) ) {
+                        voList.add(new JoinedCourseVO(course));
+                    }
                 }
             }
             return new Response<>(true, voList);

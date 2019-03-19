@@ -6,6 +6,7 @@ import nju.py.pyoodle.util.Response;
 import nju.py.pyoodle.vo.ScoreVO;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: py
@@ -14,7 +15,7 @@ import java.util.List;
  */
 @Service
 public interface ScoreService {
-    Response<Boolean> saveScore(List<String> nameScoreList);
+    Response<Boolean> saveScore(String courseName, int all);
 
-    Response<List<ScoreVO>> getScoresByCourse(String courseName);
+    Response<List<ScoreVO>> getScoresByCourse(String userName);
 }

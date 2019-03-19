@@ -4,11 +4,11 @@ var char1El = document.getElementById('chart1');
 new Chart(char1El, {
   type: 'bar',
   data: {
-    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+    labels: ["操作系统", "计网", "数据库"],
     datasets: [{
       label: "Population (millions)",
       backgroundColor: ["#39f", "#895df6", "#3cba9f", "#e8c3b9", "#c45850"],
-      data: [1478, 5267, 3600, 1900, 4700]
+      data: [0, 1, 1]
     }]
   },
   
@@ -23,7 +23,7 @@ new Chart(char1El, {
     },
     title: {
       display: true,
-      text: 'Predicted world population (millions) in 2050'
+      text: '预期'
     }
   }
 });
@@ -71,7 +71,7 @@ new Chart(char2El, {
     },
     title: {
       display: true,
-      text: 'Sales per region'
+      text: '单地区'
     }
   }
 });
@@ -84,7 +84,7 @@ var char3El = document.getElementById('chart3');
 new Chart(char3El, {
   type: 'horizontalBar',
   data: {
-    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+    labels: ["南京", "上海", "北京", "天津", "国外"],
     datasets: [{
       label: "Population (millions)",
       backgroundColor: ["#39f", "#895df6", "#3cba9f", "#e8c3b9", "#c45850"],
@@ -102,7 +102,7 @@ new Chart(char3El, {
     },
     title: {
       display: true,
-      text: 'Predicted activity in 2020'
+      text: '预期活动'
     }
   }
 });
@@ -114,9 +114,9 @@ var char4El = document.getElementById('chart4');
 new Chart(char4El, {
   type: 'radar',
   data: {
-    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+    labels: ["南京", "上海", "北京", "天津", "国外"],
     datasets: [{
-      label: "1950",
+      label: "2016",
       fill: true,
       backgroundColor: "rgba(51,153,255,0.6)",
       borderColor: "rgba(51,153,255,0.2)",
@@ -143,7 +143,7 @@ new Chart(char4El, {
     },
     title: {
       display: true,
-      text: 'Distribution in % of world population'
+      text: '分布'
     }
   }
 });
@@ -155,10 +155,10 @@ var char5El = document.getElementById('chart5');
 new Chart(char5El, {
     type: 'doughnut',
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      labels: ["老师", "学生"],
       datasets: [
         {
-          label: "Population (millions)",
+          label: "师生统计",
           backgroundColor: ["#39f", "#895df6","#3cba9f","#e8c3b9","#c45850"],
           data: [2478,5267,734,784,433]
         }
@@ -172,7 +172,8 @@ new Chart(char5El, {
       },
       title: {
         display: true,
-        text: 'Predicted world population (millions) in 2050'
+        text: '人数'
       }
     }
 });
+

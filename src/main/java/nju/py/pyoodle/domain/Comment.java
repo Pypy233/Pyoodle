@@ -1,5 +1,9 @@
 package nju.py.pyoodle.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -10,6 +14,9 @@ import java.time.LocalDate;
  */
 @Entity
 @Table(name = "comment")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +27,9 @@ public class Comment {
 
     private LocalDate time;
 
+    private String content;
 
+    private String explanation;
 
     
 }

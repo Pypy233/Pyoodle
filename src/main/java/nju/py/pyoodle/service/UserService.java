@@ -30,4 +30,6 @@ public interface UserService {
     Response<Boolean> updateUser(String ordinaryUserName, String newUserName, String password, String email, String studentNumber);
 
     Response<User> getStudentNum(String userName);
+
+    Response<Integer> getNum(UserType userType);
 }

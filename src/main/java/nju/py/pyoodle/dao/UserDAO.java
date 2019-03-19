@@ -15,5 +15,7 @@ public interface UserDAO extends JpaRepository<User, String>{
 
     User getUserByConfirmationToken(String token);
 
+    User getUserByStudentNumber(String studentNumber);
+
 
 }

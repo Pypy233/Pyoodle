@@ -1,6 +1,11 @@
 package nju.py.pyoodle.controller;
 
+import nju.py.pyoodle.dao.CourseDAO;
+import nju.py.pyoodle.dao.DroppedCourseDAO;
+import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.Course;
+import nju.py.pyoodle.domain.DroppedCourse;
+import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.CourseService;
 import nju.py.pyoodle.util.DateUtil;
 import nju.py.pyoodle.util.Response;
@@ -22,9 +27,18 @@ import java.util.List;
 public class CourseController {
     private final CourseService courseService;
 
+    private final DroppedCourseDAO droppedCourseDAO;
+
+    private final CourseDAO courseDAO;
+
+    private final UserDAO userDAO;
+
     @Autowired
-    public CourseController(CourseService courseService) {
+    public CourseController(CourseService courseService, DroppedCourseDAO droppedCourseDAO, CourseDAO courseDAO, UserDAO userDAO) {
         this.courseService = courseService;
+        this.droppedCourseDAO = droppedCourseDAO;
+        this.courseDAO = courseDAO;
+        this.userDAO = userDAO;
     }
 
     @PostMapping("/course/save")
@@ -107,5 +121,19 @@ public class CourseController {
     public Response<List<String>> listCourseByTeacher(String userName) {
         return courseService.listCourseByTeacher(userName);
     }
+
+    @GetMapping("/course/lsDrop")
+    @ResponseBody
+    public Response<List<DroppedCourse>> listDroppedCourse(String userName) {
+        try {
+            User user = userDAO.getUserByName(userName);
+            List<DroppedCourse> droppedCourseList = droppedCourseDAO.getDroppedCoursesByUser(user);
+            return new Response<>(true, droppedCourseList);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new Response<>(true, "");
+        }
+    }
+
 
 }

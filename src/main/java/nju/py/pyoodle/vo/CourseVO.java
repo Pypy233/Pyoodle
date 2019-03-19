@@ -26,7 +26,9 @@ public class CourseVO {
         this.name = course.getName();
         this.teacherName = course.getTeacher().getName();
         this.time = course.getTime().toString();
-        this.picPath = FileUtil.listPicName(course.getName()).get(0);
+        if (FileUtil.listPicName(course.getName()) != null && FileUtil.listPicName(course.getName()).size() != 0) {
+            this.picPath = FileUtil.listPicName(course.getName()).get(0);
+        }else this.picPath = "";
     }
 
 }

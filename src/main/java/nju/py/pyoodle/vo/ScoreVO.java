@@ -20,9 +20,12 @@ public class ScoreVO {
 
     private int score;
 
+    private String courseName;
+
     public ScoreVO(Score score) {
         this.studentName = score.getStudent().getName();
         this.studentNum = score.getStudent().getStudentNumber();
         this.score = score.getVal();
+        this.courseName = score.getCourse().getName();
     }
 }

@@ -9,6 +9,8 @@ import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @Author: py
  * @Date: 2019/1/31 下午2:17
@@ -112,6 +114,23 @@ public class UserServiceImpl implements UserService {
             User user = userDAO.getUserByName(userName);
             return new Response<>(true, user);
         } catch (Exception ex) {
+            return new Response<>(false, "");
+        }
+    }
+
+    @Override
+    public Response<Integer> getNum(UserType userType) {
+        try {
+            List<User> userList = userDAO.findAll();
+            int count = 0;
+            for(User user: userList) {
+                if (user.getType().equals(userType)) {
+                    count++;
+                }
+            }
+            return new Response<>(true, count);
+        } catch (Exception ex) {
+            ex.printStackTrace();
             return new Response<>(false, "");
         }
     }

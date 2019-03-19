@@ -79,16 +79,19 @@ public class FileUtil {
     private static List<String> listFileName(String folderName) {
 
         File file = new File(folderName);
+        System.out.println(folderName);
         List<String> list = new ArrayList<>();
         if (file.isDirectory()) {
             File[] files = file.listFiles();
             assert files != null;
+            System.out.println(files.length);
             for (File file1 : files) {
                 if ( file1.isDirectory() ) {
                     return listFileName(file1.getPath());
                 }
                 if ( !file1.getName().startsWith(".") ) //兄dei，有隐藏.文件，剔掉
                     list.add(file1.getAbsolutePath().substring("/Users/py".length() + 1));
+
             }
         }
         return list;
@@ -111,7 +114,10 @@ public class FileUtil {
 
 
     public static void main(String[] args) {
-        System.out.println(getHwPath("2019-02-27 数据结构", "链表", "161250096"));
+       List<String> stringList = FileUtil.listHwName("2019-02-27 数据结构");
+       for(String str: stringList) {
+           System.out.println(str);
+       }
     }
 
 

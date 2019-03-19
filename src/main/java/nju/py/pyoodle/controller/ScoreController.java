@@ -29,13 +29,13 @@ public class ScoreController {
 
     @RequestMapping("/save")
     @ResponseBody
-    public Response<Boolean> saveScore(@RequestParam("courseNameList") List<String> nameScoreList) {
-        return scoreService.saveScore(nameScoreList);
+    public Response<Boolean> saveScore(@RequestParam("courseName") String courseName, @RequestParam("all") int all) {
+        return scoreService.saveScore(courseName, all);
     }
 
     @RequestMapping("/get")
     @ResponseBody
-    public Response<List<ScoreVO>> getScoresByCourse(String courseName) {
-        return scoreService.getScoresByCourse(courseName);
+    public Response<List<ScoreVO>> getScoresByCourse(String userName) {
+        return scoreService.getScoresByCourse(userName);
     }
 }

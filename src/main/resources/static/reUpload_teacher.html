@@ -17,9 +17,8 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/notification.js"></script>
 <script src="/js/init.js"></script>
-<script src="/js/courseBase.js"></script>
-<script src="/js/saveFile.js"></script>
-<script src="/js/courseBase.js"></script>
+<script src="/js/courseDetailDisplay.js"></script>
+
 <!--HEADER-->
 <header id="top-head" class="uk-position-fixed">
     <div class="uk-container uk-container-expand uk-background-primary">
@@ -108,7 +107,7 @@
             </li>
             <li class="uk-parent"><a href="#"><span data-uk-icon="icon: album" class="uk-margin-small-right"></span>上传文件</a>
                 <ul class="uk-nav-sub">
-                    <li><a title="上传课件" href="https://zzseba78.github.io/Kick-Off/article.html">上传课件</a></li>
+                    <li><a title="上传课件" href="/reUpload_teacher.html">上传课件</a></li>
                     <li><a title="上传作业" href="https://zzseba78.github.io/Kick-Off/album.html">上传作业</a></li>
                     <li><a title="上传成绩" href="https://zzseba78.github.io/Kick-Off/cover.html">上传成绩</a></li>
                 </ul>
@@ -169,7 +168,6 @@
     </div>
 </aside>
 <div id="content" data-uk-height-viewport="expand: true" class="uk-flex uk-flex-center">
-    <script src="js/courseBase.js"></script>
 
     <fieldset class="uk-fieldset">
         <div>
@@ -203,33 +201,33 @@
                     <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
                 </div>
             </form>
-
-
-        </div>
-
-
-        <div class="uk-grid">
-            <div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">上传作业</label></div>
-
-            <form method="POST" enctype="multipart/form-data" id="hwUploadForm">
-                <div class="uk-inline">
-                    <span class="uk-form-icon">
-                        <img src="img/homework.svg" class="uk-responsive-width " data-uk-svg>
-                    </span>
-                    <input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>
-                </div>
-            </form>
-
-
-
-
-
             <div class="uk-align-center">
                 <button id="btnSubmit" type="button" class="uk-button uk-button-primary uk-border-pill uk-width-1-1">提交申请</button>
+
+
             </div>
 
 
         </div>
+
+
+        <!--<div class="uk-grid">-->
+            <!--<div class="uk-width-1-3"> <label class="uk-text-large uk-text-contrast">上传作业</label></div>-->
+
+            <!--<form method="POST" enctype="multipart/form-data" id="hwUploadForm">-->
+                <!--<div class="uk-inline">-->
+                    <!--<span class="uk-form-icon">-->
+                        <!--<img src="img/homework.svg" class="uk-responsive-width " data-uk-svg>-->
+                    <!--</span>-->
+                    <!--<input type="file" name="files" class="uk-input uk-form-contrast" multiple/><br/><br/>-->
+                <!--</div>-->
+            <!--</form>-->
+
+
+
+
+
+
 
     </fieldset>
 </div>
@@ -237,24 +235,10 @@
 
 <script src="/js/notification.js"></script>
 <script src="/js/chartScripts.js"></script>
-<script src="/js/saveFile.js"></script>
 <script src="/js/courseDetailDisplay.js"></script>
 <script src="/js/notification.js"></script>
 <script src="/js/teacherReupload.js"></script>
 </body>
 
-<script>
-
-    $("#btnSubmit").click(function (event) {
-        localStorage.courseName = $('#courseName').val();
-
-        event.preventDefault();
-        fire_ajax_submit();
-       // pic_submit();
-        hw_submit();
-        saveCourseBase();
-
-    });
-</script>
 
 </html>

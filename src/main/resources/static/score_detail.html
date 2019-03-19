@@ -11,6 +11,7 @@
 <body>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/init.js"></script>
+<script src="/js/scoreDetail.js"></script>
 
 <!--HEADER-->
 <header id="top-head" class="uk-position-fixed">
@@ -156,13 +157,26 @@
 <!-- /LEFT BAR -->
 <!-- CONTENT -->
 <div id="content" data-uk-height-viewport="expand: true">
+    <!--<div class="uk-overflow-auto">-->
+        <!--<table id="course_table" class="blueTable">-->
+            <!--<tr>-->
+                <!--<td class="uk-table-small">姓名</td>-->
+                <!--<td class="uk-width-small">学号</td>-->
+                <!--<td class="uk-width-small">课程</td>-->
+                <!--<td class="uk-table-small">分数</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
     <div class="uk-overflow-auto">
-        <table id="course_table" class="blueTable">
+        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider blueTable" id="course_table">
+            <thead>
             <tr>
-                <td class="uk-table-small">姓名</td>
-                <td class="uk-width-small">学号</td>
-                <td class="uk-table-small">分数</td>
+                <th class="uk-table-small">姓名</th>
+                <th class="uk-table-small">学号</th>
+                <th class="uk-table-small">课程</th>
+                <th class="uk-width-small">分数</th>
             </tr>
+            </thead>
         </table>
     </div>
     <div class="uk-align-center" style="text-align:center">
@@ -200,7 +214,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="js/chartScripts.js"></script>
-<script src="/js/scoreDetail.js"></script>
+
 <!--<script src="js/courseSelect.js"></script>-->
 </body>
 </html>

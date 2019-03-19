@@ -25,6 +25,7 @@ function login() {
         success: function (data) {
             console.log(user)
             if (data.success) {
+                localStorage.setItem('username', user);
                 localStorage.username = user;
                 if (user === 'admin') {
                     window.location.href="/dashboard_admin.html";

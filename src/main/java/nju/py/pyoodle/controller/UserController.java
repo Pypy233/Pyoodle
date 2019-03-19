@@ -72,6 +72,18 @@ public class UserController {
         return userService.getStudentNum(userName);
     }
 
+    @GetMapping("/teaNum")
+    @ResponseBody
+    public Response<Integer> getTeacherNum() {
+        return userService.getNum(UserType.TEACHER);
+    }
+
+    @GetMapping("/stuNum")
+    @ResponseBody
+    public Response<Integer> getStuNum() {
+        return userService.getNum(UserType.FRESH);
+    }
+
 
 
 

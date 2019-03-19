@@ -2,6 +2,28 @@ document.write("<script language=javascript src='/js/notification.js'></script>"
 $(document).ready(function () {
     listHw();
     getLink();
+
+
+    $.ajax({
+        type: "GET",
+        url: "/user",
+        dataType: "json",
+        data: {
+            userName: localStorage.username
+        },
+        success: function (data) {
+            if (data.success) {
+                console.log(data.data['studentNumber']);
+                studentNum = data.data['studentNumber'];
+                localStorage.setItem('studentNum', studentNum);
+            } else
+                notifyWarning('连接问题请重试');
+        },
+        error: function () {
+            alert("连接问题请重试");
+        }
+    });
+
     $('#btnSubmit').unbind('click').click(function (event) {
         hw_submit();
 
@@ -141,31 +163,11 @@ function hw_submit() {
 
     var studentNum = '';
 
-    $.ajax({
-        type: "GET",
-        url: "/user",
-        dataType: "json",
-        data: {
-            userName: localStorage.username
-        },
-        success: function (data) {
-            if (data.success) {
-                console.log(data.data['studentNumber']);
-                studentNum = data.data['studentNumber'];
-                localStorage.setItem('studentNum', studentNum);
-            } else
-                notifyWarning('连接问题请重试');
-        },
-        error: function () {
-            alert("连接问题请重试");
-        }
-    });
-
     // Get form
     var form = $('#hwUploadForm')[0];
 
     var data = new FormData(form);
-
+    console.log('-----' + localStorage.studentNum);
     data.append("courseName", localStorage.courseName);
     data.append("hwName", localStorage.hwName);
     data.append('studentNum', localStorage.studentNum);

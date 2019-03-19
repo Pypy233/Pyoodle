@@ -1,6 +1,7 @@
 package nju.py.pyoodle.dao;
 
 import nju.py.pyoodle.domain.BBS;
+import nju.py.pyoodle.domain.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -9,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Version 1.0
  */
 public interface BBSDAO extends JpaRepository<BBS, Integer> {
-
+    BBS getBBSByCourse(Course course);
 }

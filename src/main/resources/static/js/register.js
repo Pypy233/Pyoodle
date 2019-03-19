@@ -28,7 +28,7 @@ function sendEmail() {
         },
 
         success: function (data) {
-            alert(data.success)
+            //alert(data.success)
             if (data.success) {
                 alert('验证邮件已发送，请确认查收')
             } else

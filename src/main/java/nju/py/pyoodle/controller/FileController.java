@@ -5,6 +5,7 @@ import nju.py.pyoodle.dao.UserDAO;
 import nju.py.pyoodle.domain.Course;
 import nju.py.pyoodle.domain.User;
 import nju.py.pyoodle.service.CourseBaseService;
+import nju.py.pyoodle.service.ScoreService;
 import nju.py.pyoodle.util.FileUtil;
 import java.io.*;
 
@@ -49,16 +50,19 @@ public class FileController {
     private final UserDAO userDAO;
     private final CourseBaseService courseBaseService;
 
+    private final ScoreService scoreService;
+
     private final Logger logger = LoggerFactory.getLogger(FileController.class);
 
     //Save the uploaded file to this folder
     private static String UPLOADED_FOLDER = "/Users/py/J2EEStrorage/";
 
     @Autowired
-    public FileController(CourseBaseService courseBaseService, CourseDAO courseDAO, UserDAO userDAO) {
+    public FileController(CourseBaseService courseBaseService, CourseDAO courseDAO, UserDAO userDAO, ScoreService scoreService) {
         this.courseBaseService = courseBaseService;
         this.courseDAO = courseDAO;
         this.userDAO = userDAO;
+        this.scoreService = scoreService;
     }
 
 
@@ -68,6 +72,7 @@ public class FileController {
                                              @RequestParam("files") MultipartFile[] uploadfiles) {
         //courseBaseService.saveCourseBase(courseName, user);
         System.out.println("ppt   " + courseName);
+        System.out.println("courseName----" + courseName);
         String prefix = courseName + "/ppt";
         logger.debug("Multiple file upload!");
 
@@ -108,6 +113,32 @@ public class FileController {
         try {
 
             saveUploadedFiles(prefix, Arrays.asList(uploadfiles));
+
+        } catch (IOException e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity("Successfully uploaded - "
+                + uploadedFileName, HttpStatus.OK);
+
+    }
+
+    @PostMapping("/api/upload/score")
+    public ResponseEntity<?> uploadScore(@RequestParam("files") MultipartFile[] uploadfiles,
+                                         @RequestParam("courseName") String courseName, @RequestParam("all") int all) {
+
+        String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+                .filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+
+        if ( StringUtils.isEmpty(uploadedFileName) ) {
+            return new ResponseEntity("please select a file!", HttpStatus.OK);
+        }
+
+        try {
+            saveUploadedScore(Arrays.asList(uploadfiles));
+            scoreService.saveScore(courseName, all);
+
+
 
         } catch (IOException e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -186,6 +217,24 @@ public class FileController {
 
             byte[] bytes = file.getBytes();
             Path path = Paths.get(UPLOADED_FOLDER + prefix + "/" + file.getOriginalFilename());
+            Files.write(path, bytes);
+
+        }
+
+    }
+
+
+    //save file
+    private void saveUploadedScore(List<MultipartFile> files) throws IOException {
+
+        for (MultipartFile file : files) {
+
+            if ( file.isEmpty() ) {
+                continue; //next pls
+            }
+
+            byte[] bytes = file.getBytes();
+            Path path = Paths.get("/Users/py/J2EEStrorage/score.xlsx");
             Files.write(path, bytes);
 
         }

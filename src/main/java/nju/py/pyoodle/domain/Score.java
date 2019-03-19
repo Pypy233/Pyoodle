@@ -29,4 +29,6 @@ public class Score {
     private User student;
 
     private int val;
+
+    private int allOrAlone;
 }

@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Version 1.0
  */
 public interface TopicDAO extends JpaRepository<Topic, Integer> {
-
+    Topic getTopicByTitle(String title);
 }
